@@ -1,3 +1,5 @@
+import React from 'react';
+
 const History = () => {
   <h3>History</h3>;
 };

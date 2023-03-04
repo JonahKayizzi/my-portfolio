@@ -1,5 +1,7 @@
-const AviationProfficiency = () => {
-  <h3>AviationProfficiency</h3>;
+import React from 'react';
+
+const Projects = () => {
+  <h3>Projects</h3>;
 };
 
-export default AviationProfficiency;
+export default Projects;

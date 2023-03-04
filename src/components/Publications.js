@@ -1,5 +1,7 @@
-const TechProjects = () => {
-  <h3>Tech Projects</h3>;
+import React from 'react';
+
+const Publications = () => {
+  <h3>Publications</h3>;
 };
 
-export default TechProjects;
+export default Publications;
