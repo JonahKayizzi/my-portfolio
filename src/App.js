@@ -1,29 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Jonathan from './components/Jonathan';
+import TechProjects from './components/TechProjects';
+import AviationProfficiency from './components/AviationProfficiency';
+import Recommendations from './components/Recommendations';
+import History from './components/History';
+import Awards from './components/Awards';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  <>
+    <Navbar />
+    <Routes>
+      <Route exact path="/" element={<Jonathan />} />
+      <Route exact path="/tech-projects" element={<TechProjects />} />
+      <Route exact path="aviation" element={<AviationProfficiency />} />
+      <Route exact path="/recommendations" element={<Recommendations />} />
+      <Route exact path="/history" element={<History />} />
+      <Route exact path="/awards" element={<Awards />} />
+    </Routes>
+  </>;
+};
 
 export default App;
