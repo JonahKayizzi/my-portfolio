@@ -10,7 +10,7 @@ import Awards from './components/Awards';
 import Banner from './pages/Banner';
 
 const App = () => {
-  <>
+  <div>
     <Banner />
     <Routes>
       <Route exact path="/" element={<Home />} />
@@ -21,7 +21,7 @@ const App = () => {
       <Route exact path="/publications" element={<Publications />} />
       <Route exact path="/awards" element={<Awards />} />
     </Routes>
-  </>;
+  </div>;
 };
 
 export default App;

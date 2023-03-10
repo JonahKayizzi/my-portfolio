@@ -3,8 +3,6 @@ import { useSelector } from 'react-redux';
 
 const LeftBar = () => {
   const { skills } = useSelector((state) => state.skillsSl);
-  console.log(skills.tools);
-
   const currentYear = new Date().getFullYear();
   const age = currentYear - 1990;
   return (
