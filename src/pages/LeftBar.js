@@ -2,8 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const LeftBar = () => {
-  const skills = useSelector((state) => state.skillsSl);
-  console.log(skills);
+  const { skills } = useSelector((state) => state.skillsSl);
+  console.log(skills.tools);
+
   const currentYear = new Date().getFullYear();
   const age = currentYear - 1990;
   return (
@@ -63,8 +64,80 @@ const LeftBar = () => {
         <li>
           <h5>Front End</h5>
           <ul>
-            <li>HTML</li>
+            {skills.frontend.map((skill) => (
+              <li key={skill.name}>
+                <span>{skill.name}</span>
+                <span>{skill.level} Years</span>
+              </li>
+            ))}
           </ul>
+        </li>
+        <li>
+          <h5>Back End</h5>
+          <ul>
+            {skills.backend.map((skill) => (
+              <li key={skill.name}>
+                <span>{skill.name}</span>
+                <span>{skill.level} Years</span>
+              </li>
+            ))}
+          </ul>
+        </li>
+        <li>
+          <h5>Other Languages</h5>
+          <ul>
+            {skills.languages.map((language) => (
+              <li key={language.name}>
+                <span>{language.name}</span>
+                <span>{language.level} Years</span>
+              </li>
+            ))}
+          </ul>
+        </li>
+        <li>
+          <h5>Tools</h5>
+          <ul>
+            <li>
+              {skills.tools.map((tool) => (
+                <span key={tool}>{tool}</span>
+              ))}
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Proffessional & Soft Skills</h5>
+          <ul>
+            <li>
+              {skills.softskills.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Aviation Related</h5>
+          <ul>
+            <li>
+              {skills.aviation.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul className="languages">
+        <h4>Languages</h4>
+        <li>
+          <span>English</span>
+          <span>Native</span>
+        </li>
+        <li>
+          <span>Swahili</span>
+          <span>Intermediate</span>
+        </li>
+        <li>
+          <span>German</span>
+          <span>Elementary</span>
         </li>
       </ul>
     </div>
