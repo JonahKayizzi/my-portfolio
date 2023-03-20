@@ -5,7 +5,9 @@ const Banner = () => (
     <div className="banner-text">
       <h1>
         I'm Jonathan Kayizzi
-        <span>Full Stack</span> Engineer
+        <span>Full Stack</span>
+        {' '}
+        Engineer
       </h1>
       <p>
         Full Stack Engineer with 3 years of experience in building web

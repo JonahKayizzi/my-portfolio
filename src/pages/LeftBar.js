@@ -65,7 +65,11 @@ const LeftBar = () => {
             {skills.frontend.map((skill) => (
               <li key={skill.name}>
                 <span>{skill.name}</span>
-                <span>{skill.level} Years</span>
+                <span>
+                  {skill.level}
+                  {' '}
+                  Years
+                </span>
               </li>
             ))}
           </ul>
@@ -76,7 +80,11 @@ const LeftBar = () => {
             {skills.backend.map((skill) => (
               <li key={skill.name}>
                 <span>{skill.name}</span>
-                <span>{skill.level} Years</span>
+                <span>
+                  {skill.level}
+                  {' '}
+                  Years
+                </span>
               </li>
             ))}
           </ul>
@@ -87,7 +95,11 @@ const LeftBar = () => {
             {skills.languages.map((language) => (
               <li key={language.name}>
                 <span>{language.name}</span>
-                <span>{language.level} Years</span>
+                <span>
+                  {language.level}
+                  {' '}
+                  Years
+                </span>
               </li>
             ))}
           </ul>
