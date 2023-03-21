@@ -9,7 +9,7 @@ const LeftBar = () => {
     <div className="left-bar w-1/5">
       <div className="bio">
         <div className="profile-pic">
-          <img src="" alt="Profile Pic" />
+          <img src="head-shot.jpg" alt="Profile Pic" />
         </div>
         <p>Jonathan Kayizzi</p>
         <p>Software Engineer</p>
