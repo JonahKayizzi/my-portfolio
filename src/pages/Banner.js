@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Banner = () => (
-  <div className="banner">
+  <div className="bg-black">
     <div className="banner-text">
       <h1>
         I am Jonathan Kayizzi

@@ -6,7 +6,7 @@ const LeftBar = () => {
   const currentYear = new Date().getFullYear();
   const age = currentYear - 1990;
   return (
-    <div className="left-bar w-1/5">
+    <div className="w-1/5 bg-black">
       <div className="bio">
         <div className="profile-pic">
           <img src="head-shot.jpg" alt="Profile Pic" />
