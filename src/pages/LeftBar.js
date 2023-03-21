@@ -1,5 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import {
+  faTwitter,
+  faGithub,
+  faLinkedin,
+  faFacebook,
+  faYoutube,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 const LeftBar = () => {
   const { skills } = useSelector((state) => state.skillsSl);
@@ -7,19 +18,31 @@ const LeftBar = () => {
   const age = currentYear - 1990;
   return (
     <div className="w-1/5 bg-black">
-      <div className="bio">
-        <div className="profile-pic">
-          <img src="head-shot.jpg" alt="Profile Pic" />
+      <div className="flex-col w-9/10 p-5 text-center text-sm">
+        <div className="p-3">
+          <img className="rounded-full" src="head-shot.jpg" alt="Profile Pic" />
         </div>
-        <p>Jonathan Kayizzi</p>
-        <p>Software Engineer</p>
-        <ul className="socials">
-          <li>Github</li>
-          <li>Facebook</li>
-          <li>LinkedIn</li>
-          <li>Youtube</li>
-          <li>Twitter</li>
-          <li>Instagram</li>
+        <p className="font-bold m-1">Jonathan Kayizzi</p>
+        <p className="m-1 font-light">Full Stack Engineer</p>
+        <ul className="flex text-amber-400">
+          <li>
+            <FontAwesomeIcon icon={faGithub} />
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faFacebook} />
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faLinkedin} />
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faYoutube} />
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faTwitter} />
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faInstagram} />
+          </li>
         </ul>
       </div>
       <ul className="contacts">
@@ -65,11 +88,7 @@ const LeftBar = () => {
             {skills.frontend.map((skill) => (
               <li key={skill.name}>
                 <span>{skill.name}</span>
-                <span>
-                  {skill.level}
-                  {' '}
-                  Years
-                </span>
+                <span>{skill.level} Years</span>
               </li>
             ))}
           </ul>
@@ -80,11 +99,7 @@ const LeftBar = () => {
             {skills.backend.map((skill) => (
               <li key={skill.name}>
                 <span>{skill.name}</span>
-                <span>
-                  {skill.level}
-                  {' '}
-                  Years
-                </span>
+                <span>{skill.level} Years</span>
               </li>
             ))}
           </ul>
@@ -95,11 +110,7 @@ const LeftBar = () => {
             {skills.languages.map((language) => (
               <li key={language.name}>
                 <span>{language.name}</span>
-                <span>
-                  {language.level}
-                  {' '}
-                  Years
-                </span>
+                <span>{language.level} Years</span>
               </li>
             ))}
           </ul>

@@ -8,6 +8,8 @@ import RightBar from './pages/RightBar';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/configureStore';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import '@fortawesome/fontawesome-free/css/all.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +21,7 @@ root.render(
         <RightBar />
       </Provider>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 reportWebVitals();
