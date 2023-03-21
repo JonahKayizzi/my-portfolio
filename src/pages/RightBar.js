@@ -16,7 +16,7 @@ const RightBar = () => (
     <ul>
       {links.map((link) => (
         <li key={link.id}>
-          <NavLink to={link.path} activeClassName="active">
+          <NavLink to={link.path} activeclassname="active">
             {link.name}
           </NavLink>
         </li>

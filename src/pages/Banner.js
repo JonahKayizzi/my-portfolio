@@ -4,7 +4,7 @@ const Banner = () => (
   <div className="banner">
     <div className="banner-text">
       <h1>
-        I'm Jonathan Kayizzi
+        I am Jonathan Kayizzi
         <span>Full Stack</span>
         {' '}
         Engineer

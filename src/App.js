@@ -9,7 +9,7 @@ import Publications from './components/Publications';
 import Awards from './components/Awards';
 import Banner from './pages/Banner';
 
-const App = () => {
+const App = () => (
   <div>
     <Banner />
     <Routes>
@@ -21,7 +21,7 @@ const App = () => {
       <Route exact path="/publications" element={<Publications />} />
       <Route exact path="/awards" element={<Awards />} />
     </Routes>
-  </div>;
-};
+  </div>
+);
 
 export default App;
