@@ -5,55 +5,46 @@ const Skills = () => {
   const { skills } = useSelector((state) => state.skillsSl);
 
   return (
-    <ul className="skills">
-      <h4>Skills</h4>
+    <ul className="flex-col px-3 py-2">
+      <h4 className="text-amber-400 text-base font-bold">Skills</h4>
       <li>
-        <h5>Front End</h5>
-        <ul>
+        <h5 className="text-amber-400 text-sm font-bold">Front End</h5>
+        <ul className="text-sm pl-2">
           {skills.frontend.map((skill) => (
-            <li key={skill.name}>
-              <span>{skill.name}</span>
-              <span>
-                {skill.level}
-                {' '}
-                Years
-              </span>
+            <li className="my-2 flex-col" key={skill.name}>
+              <p className="flex justify-between">
+                <span>{skill.name}</span>
+                <span>{skill.level} Years</span>
+              </p>
+              <div className={`h-px w-${skill.level}/5 bg-amber-400`}></div>
             </li>
           ))}
         </ul>
       </li>
       <li>
-        <h5>Back End</h5>
+        <h5 className="text-amber-400 text-sm font-bold">Back End</h5>
         <ul>
           {skills.backend.map((skill) => (
             <li key={skill.name}>
               <span>{skill.name}</span>
-              <span>
-                {skill.level}
-                {' '}
-                Years
-              </span>
+              <span>{skill.level} Years</span>
             </li>
           ))}
         </ul>
       </li>
       <li>
-        <h5>Other Languages</h5>
+        <h5 className="text-amber-400 text-sm font-bold">Other Languages</h5>
         <ul>
           {skills.languages.map((language) => (
             <li key={language.name}>
               <span>{language.name}</span>
-              <span>
-                {language.level}
-                {' '}
-                Years
-              </span>
+              <span>{language.level} Years</span>
             </li>
           ))}
         </ul>
       </li>
       <li>
-        <h5>Tools</h5>
+        <h5 className="text-amber-400 text-xs font-bold">Tools</h5>
         <ul>
           <li>
             {skills.tools.map((tool) => (
@@ -63,7 +54,9 @@ const Skills = () => {
         </ul>
       </li>
       <li>
-        <h5>Proffessional & Soft Skills</h5>
+        <h5 className="text-amber-400 text-xs font-bold">
+          Proffessional & Soft Skills
+        </h5>
         <ul>
           <li>
             {skills.softskills.map((skill) => (
@@ -73,7 +66,7 @@ const Skills = () => {
         </ul>
       </li>
       <li>
-        <h5>Aviation Related</h5>
+        <h5 className="text-amber-400 text-xs font-bold">Aviation Related</h5>
         <ul>
           <li>
             {skills.aviation.map((skill) => (
