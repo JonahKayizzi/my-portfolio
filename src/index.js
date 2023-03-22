@@ -21,7 +21,7 @@ root.render(
         <RightBar />
       </Provider>
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 reportWebVitals();
