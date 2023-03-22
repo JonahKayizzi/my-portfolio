@@ -6,7 +6,7 @@ const initialState = {
       { name: 'Javascript', level: 2 },
       { name: 'React & Redux', level: 1 },
       { name: 'HTML5 & CSS3', level: 4 },
-      { name: 'TypeScript', level: 0.5 },
+      { name: 'TypeScript', level: 1 },
     ],
     backend: [
       { name: 'Ruby on Rails', level: 1 },
