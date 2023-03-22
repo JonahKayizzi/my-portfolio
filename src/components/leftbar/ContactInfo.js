@@ -5,34 +5,34 @@ const ContactInfo = () => {
   const age = currentYear - 1990;
 
   return (
-    <ul className="contacts">
+    <ul className="flex-col text-xs font-light px-3 py-2">
       <li>
-        <p>
-          <span>Contact:</span>
+        <p className="flex justify-between my-2">
+          <span className="text-amber-400">Contact:</span>
           <span>+256759223526</span>
         </p>
       </li>
       <li>
-        <p>
-          <span>Email:</span>
+        <p className="flex justify-between my-2">
+          <span className="text-amber-400">Email:</span>
           <span>jonahkayizzi@gmail.com</span>
         </p>
       </li>
       <li>
-        <p>
-          <span>Age:</span>
+        <p className="flex justify-between my-2">
+          <span className="text-amber-400">Age:</span>
           <span>{age}</span>
         </p>
       </li>
       <li>
-        <p>
-          <span>Residence:</span>
+        <p className="flex justify-between my-2">
+          <span className="text-amber-400">Residence:</span>
           <span>Kampala, Uganda</span>
         </p>
       </li>
       <li>
-        <p>
-          <span>Availability:</span>
+        <p className="flex justify-between my-2">
+          <span className="text-amber-400">Availability:</span>
           <span>
             <strong> Remote </strong>
             <em> & Relocation </em>

@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const AboutMe = () => (
-  <div className="flex-col w-9/10 p-5 text-center text-sm">
+  <div className="flex-col w-9/10 px-5 py-3 text-center text-sm">
     <div className="p-3">
       <img className="rounded-full" src="head-shot.jpg" alt="Profile Pic" />
     </div>
