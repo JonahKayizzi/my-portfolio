@@ -14,9 +14,13 @@ const Skills = () => {
             <li className="my-2 flex-col" key={skill.name}>
               <p className="flex justify-between">
                 <span>{skill.name}</span>
-                <span>{skill.level} Years</span>
+                <span>
+                  {skill.level}
+                  {' '}
+                  Years
+                </span>
               </p>
-              <div className={`h-px w-${skill.level}/5 bg-amber-400`}></div>
+              <div className={`w-${skill.level}/5 h-px bg-amber-400`} />
             </li>
           ))}
         </ul>
@@ -27,7 +31,11 @@ const Skills = () => {
           {skills.backend.map((skill) => (
             <li key={skill.name}>
               <span>{skill.name}</span>
-              <span>{skill.level} Years</span>
+              <span>
+                {skill.level}
+                {' '}
+                Years
+              </span>
             </li>
           ))}
         </ul>
@@ -38,7 +46,11 @@ const Skills = () => {
           {skills.languages.map((language) => (
             <li key={language.name}>
               <span>{language.name}</span>
-              <span>{language.level} Years</span>
+              <span>
+                {language.level}
+                {' '}
+                Years
+              </span>
             </li>
           ))}
         </ul>
