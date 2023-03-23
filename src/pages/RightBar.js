@@ -12,7 +12,7 @@ const links = [
 ];
 
 const RightBar = () => (
-  <nav className="w-1/6 bg-black">
+  <nav className="w-1/5 bg-black">
     <ul>
       {links.map((link) => (
         <li key={link.id}>
