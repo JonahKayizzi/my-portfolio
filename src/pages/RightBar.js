@@ -14,6 +14,7 @@ const links = [
 const RightBar = () => (
   <nav className="w-1/5 bg-black">
     <ul>
+      <li className="text-amber-400">This section is under construction</li>
       {links.map((link) => (
         <li key={link.id}>
           <NavLink to={link.path} activeclassname="active">

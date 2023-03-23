@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Banner = () => (
-  <div className="bg-black flex items-center gap-3 p-5">
+  <div className="bg-black flex justify-between items-center gap-3 p-5">
     <div className="w-3/5">
       <h1 className="font-bold text-3xl text-center my-2">
         <p>I am Jonathan Kayizzi</p>

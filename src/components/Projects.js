@@ -2,6 +2,7 @@ import React from 'react';
 
 const Projects = () => (
   <div>
+    <p className="text-amber-400">This section is under construction</p>
     <h3>My Projects</h3>
     <p>
       I have spent 2000+ hours working on full-stack web projects for Start ups,
