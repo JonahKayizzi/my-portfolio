@@ -57,18 +57,20 @@ const links = [
 ];
 
 const RightBar = () => (
-  <nav className="w-1/5 bg-black">
-    <ul>
-      <li className="text-amber-400">This section is under construction</li>
+  <nav className="w-1/5 bg-black pt-48">
+    <div>
       {links.map((link) => (
-        <li key={link.id}>
-          <NavLink to={link.path} activeclassname="active">
-            {link.icon}
-            {link.name}
-          </NavLink>
-        </li>
+        <NavLink
+          className="flex justify-start gap-3 items-center px-2 py-6 text-xs font-bold"
+          to={link.path}
+          activeclassname="active"
+          key={link.id}
+        >
+          {link.icon}
+          {link.name}
+        </NavLink>
       ))}
-    </ul>
+    </div>
   </nav>
 );
 

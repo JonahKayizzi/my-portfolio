@@ -10,7 +10,7 @@ import Awards from './components/Awards';
 import Banner from './pages/Banner';
 
 const App = () => (
-  <div>
+  <div className="w-9/12">
     <Banner />
     <Routes>
       <Route exact path="/" element={<Home />} />
