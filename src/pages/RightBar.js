@@ -57,7 +57,7 @@ const links = [
 ];
 
 const RightBar = () => (
-  <nav className="w-1/5 bg-black pt-48">
+  <nav className="w-1/5 bg-black pt-12">
     <div>
       {links.map((link) => (
         <NavLink
