@@ -4,6 +4,7 @@ const initialState = {
   projects: [
     {
       name: 'Air Navigation Services - Safety Management System',
+      rank: 1,
       source: 'private',
       demo: 'private',
       images: ['ans-sms.png'],
@@ -23,6 +24,7 @@ const initialState = {
     },
     {
       name: 'Doctor Reservations',
+      rank: 2,
       source: 'https://github.com/JonahKayizzi/doctors-reservations-frontend',
       demo: 'https://doctors-reservations.netlify.app/',
       image: ['doctors-reservations.png'],
@@ -43,6 +45,7 @@ const initialState = {
     },
     {
       name: 'Budget App',
+      rank: 3,
       source: 'https://github.com/JonahKayizzi/Budget-App-RoR',
       demo: 'https://budget-app-r5on.onrender.com/',
       image: ['budget-app.png'],
@@ -58,7 +61,8 @@ const initialState = {
         'A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what',
     },
     {
-      name: 'Space X - Clone',
+      name: 'Space Travellers Hub',
+      rank: 4,
       source: 'https://github.com/JonahKayizzi/space-travellers-hub',
       demo: 'https://cosmic-sundae-27c46b.netlify.app/missions',
       image: ['spacex-app.png'],
