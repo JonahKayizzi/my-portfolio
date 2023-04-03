@@ -32,7 +32,7 @@ const Cards = ({ items }) => (
               {item.tools.length > 5 && (
                 <li>
                   <span className="text-xs text-gray-600 m-0 p-1 bg-gray-200 rounded-md">
-                    {`+${item.tools.length - 6}`}
+                    {`+${item.tools.length - 5}`}
                   </span>
                 </li>
               )}
