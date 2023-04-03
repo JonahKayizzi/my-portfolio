@@ -23,12 +23,6 @@ const Projects = () => {
         />
       </form>
       <Cards items={projects} />
-      <button
-        className="bg-amber-500 hover:bg-amber-400 text-black font-bold py-2 px-4 rounded-md p-3 my-10 px-6"
-        type="button"
-      >
-        LOAD MORE . . .
-      </button>
     </div>
   );
 };
