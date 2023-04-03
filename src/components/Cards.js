@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Modal from './Modal';
 
 const Cards = ({ items }) => {
   const [numItems, setNumItems] = useState(4);
+  const [modalStates, setModalStates] = useState(items.map(() => false));
 
   const handleLoadMore = () => {
     setNumItems(numItems + 4);
   };
 
+  const handleModal = (index) => {
+    setModalStates((prev) => prev.map((state, i) => (i === index ? !state : state)));
+  };
+
   return (
     <div className="flex flex-wrap mb-10 justify-center">
-      {items.slice(0, numItems).map((item) => (
-        <div className="w-1/2 p-2" key={item.rank}>
+      {items.slice(0, numItems).map((item, index) => (
+        <button
+          className="w-1/2 p-2"
+          type="button"
+          onClick={() => handleModal(index)}
+          key={item.rank}
+        >
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div
               className="w-full h-48 bg-cover bg-center"
@@ -60,7 +70,12 @@ const Cards = ({ items }) => {
               </div>
             </div>
           </div>
-        </div>
+          <Modal
+            item={item}
+            isModalOpen={modalStates[index]}
+            handleModal={() => handleModal(index)}
+          />
+        </button>
       ))}
       {numItems < items.length ? (
         <button
