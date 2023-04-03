@@ -7,7 +7,7 @@ const initialState = {
       rank: 1,
       source: 'private',
       demo: 'private',
-      images: ['ans-sms.png'],
+      images: ['images/SMS.jpg'],
       tools: [
         'PHP',
         'Yii Framework',
@@ -27,7 +27,7 @@ const initialState = {
       rank: 2,
       source: 'https://github.com/JonahKayizzi/doctors-reservations-frontend',
       demo: 'https://doctors-reservations.netlify.app/',
-      image: ['doctors-reservations.png'],
+      images: ['images/DOCTORS.jpg'],
       tools: [
         'React',
         'Ruby on Rails',
@@ -48,7 +48,7 @@ const initialState = {
       rank: 3,
       source: 'https://github.com/JonahKayizzi/Budget-App-RoR',
       demo: 'https://budget-app-r5on.onrender.com/',
-      image: ['budget-app.png'],
+      images: ['images/BUDGET.jpg'],
       tools: [
         'ERD',
         'Ruby on Rails',
@@ -65,7 +65,7 @@ const initialState = {
       rank: 4,
       source: 'https://github.com/JonahKayizzi/space-travellers-hub',
       demo: 'https://cosmic-sundae-27c46b.netlify.app/missions',
-      image: ['spacex-app.png'],
+      images: ['images/SPACEX.jpg'],
       tools: [
         'Redux',
         'React',
