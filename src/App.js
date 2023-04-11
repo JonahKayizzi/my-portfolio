@@ -1,29 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Employment from './components/Employment';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Recommendations from './components/Recommendations';
+import Publications from './components/Publications';
+import Awards from './components/Awards';
+import Banner from './pages/Banner';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="w-9/12">
+    <Banner />
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/projects" element={<Projects />} />
+      <Route exact path="/recommendations" element={<Recommendations />} />
+      <Route exact path="/employment" element={<Employment />} />
+      <Route exact path="/education" element={<Education />} />
+      <Route exact path="/publications" element={<Publications />} />
+      <Route exact path="/awards" element={<Awards />} />
+    </Routes>
+  </div>
+);
 
 export default App;

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family:
@@ -14,6 +18,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 7.1% 8.3%;
+  background-image: url('../public/bg.png');
+}
+
+#root {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2em;
+  background-color: rgba(20, 20, 20, 0.9);
 }
 
 code {
@@ -24,4 +40,15 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  color: #fff;
+  background-color: #fbbf24;
 }
