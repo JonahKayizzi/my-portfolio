@@ -78,12 +78,20 @@ const initialState = {
         'The Space Travellers hub is web application that works with real live data from the SpaceX API. The app is for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.',
     },
   ],
+  searchedProjects: [],
 };
 
 const projectsSlice = createSlice({
   name: 'projectSli',
   initialState,
-  reducers: {},
+  reducers: {
+    searchProjects: (state, action) => ({
+      ...state,
+      searchedProjects: state.projects.filter((project) =>
+        project.name.toLowerCase().includes(action.payload.toLowerCase())
+      ),
+    }),
+  },
 });
 
 export default projectsSlice.reducer;
