@@ -87,11 +87,12 @@ const projectsSlice = createSlice({
   reducers: {
     searchProjects: (state, action) => ({
       ...state,
-      searchedProjects: state.projects.filter((project) =>
-        project.name.toLowerCase().includes(action.payload.toLowerCase())
-      ),
+      // eslint-disable-next-line max-len
+      searchedProjects: state.projects.filter((project) => project.name.toLowerCase().includes(action.payload.toLowerCase())),
     }),
   },
 });
+
+export const { searchProjects } = projectsSlice.actions;
 
 export default projectsSlice.reducer;

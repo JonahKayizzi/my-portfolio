@@ -1,9 +1,27 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Cards from './Cards';
+import { searchProjects } from '../redux/projects';
 
 const Projects = () => {
-  const { projects } = useSelector((state) => state.projectsSli);
+  const { projects, searchedProjects } = useSelector(
+    (state) => state.projectsSli,
+  );
+  const dispatch = useDispatch();
+
+  const [search, setSearch] = useState({
+    title: '',
+  });
+
+  const handleSearch = (e) => {
+    setSearch({
+      ...search,
+      [e.target.name]: e.target.value,
+    });
+    dispatch(searchProjects(search.title));
+  };
+
+  const displayedProjects = searchedProjects.length !== 0 ? searchedProjects : projects;
   return (
     <div className="flex flex-col items-center pt-12">
       <h3 className="py-4">My Projects</h3>
@@ -20,9 +38,10 @@ const Projects = () => {
           type="text"
           name="title"
           placeholder="Search for projects by technology; e.g. React, Redux, Ruby on Rails, Java, PHP, etc."
+          onChange={handleSearch}
         />
       </form>
-      <Cards items={projects} />
+      <Cards items={displayedProjects} />
     </div>
   );
 };
