@@ -88,7 +88,10 @@ const projectsSlice = createSlice({
     searchProjects: (state, action) => ({
       ...state,
       // eslint-disable-next-line max-len
-      searchedProjects: state.projects.filter((project) => project.name.toLowerCase().includes(action.payload.toLowerCase())),
+      searchedProjects: state.projects.filter((project) => project.tools
+        .join()
+        .toLowerCase()
+        .includes(action.payload.toLowerCase())),
     }),
   },
 });
