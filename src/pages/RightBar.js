@@ -61,7 +61,7 @@ const RightBar = () => (
     <div>
       {links.map((link) => (
         <NavLink
-          className="flex justify-start gap-3 items-center px-2 py-6 text-xs font-bold"
+          className="flex justify-start gap-3 items-center px-2 py-6 text-s font-light "
           to={link.path}
           activeclassname="active"
           key={link.id}
