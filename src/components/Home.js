@@ -105,7 +105,37 @@ const Home = () => (
       </ul>
     </div>
     <div className="bg-black my-5 p-5">
-      <p>Learning goals</p>
+      <h2 className="text-xl font-thin my-4 text-right mr-4">
+        Next Learning Goals
+      </h2>
+      <ul className="flex justify-around gap-2 my-2">
+        <li className="w-1/3 flex flex-col gap-2 items-center justify-around gap-2">
+          <img
+            className="w-full rounded-full shadow shadow-white"
+            src="web3.png"
+            alt="react"
+          />
+          <h3 className="text-amber-400 text-sm font-thin">web3</h3>
+        </li>
+        <li className="w-1/3 flex flex-col gap-2 items-center justify-around ">
+          <img
+            className="w-full rounded-full shadow shadow-white"
+            src="cicd.png"
+            alt="redux"
+          />
+          <h3 className="text-amber-400 text-sm font-thin">CI/CD tools</h3>
+        </li>
+        <li className="w-1/3 flex flex-col gap-2 items-center justify-around ">
+          <img
+            className="w-full rounded-full shadow shadow-white"
+            src="clouddev.png"
+            alt="redux"
+          />
+          <h3 className="text-amber-400 text-sm font-thin">
+            Developing Cloud Solutions
+          </h3>
+        </li>
+      </ul>
     </div>
     <div className="bg-black my-5 p-5">
       <p>Outside code</p>
