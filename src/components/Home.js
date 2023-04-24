@@ -1,6 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faStar,
+  faPlane,
+  faBuildingColumns,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Home = () => (
@@ -138,12 +143,79 @@ const Home = () => (
       </ul>
     </div>
     <div className="bg-black my-5 p-5">
-      <p>Outside code</p>
-      <span>Mentorship</span>
-      <span>Aviation</span>
+      <h2 className="text-xl font-thin my-4 text-left ml-4">Besides Code</h2>
+      <h3 className="text-amber-400 text-sm font-thin">Mentorship</h3>
+      <ul className="flex justify-around gap-2 my-2">
+        <li className="w-3/5 flex flex-col gap-2 items-center justify-around ">
+          <img className="w-full rounded-lg" src="mentor2.jpg" alt="mentor2" />
+        </li>
+        <li className="w-2/5 flex flex-col gap-2 items-center justify-around gap-2">
+          <h4 className="text-white text-sm font-thin italic">
+            <span>
+              &ldquo;technical support to Junior developers through code
+              reviews&rdquo;
+            </span>
+            <br />
+            <br />
+            <span>
+              &ldquo;advice and tips on how to maintain motivation and longevity
+              in their careers&rdquo;
+            </span>
+            <br />
+            <br />
+            <span>
+              &ldquo;propose improvements to code organization to improve code
+              quality and overall performance&rdquo;
+            </span>
+          </h4>
+        </li>
+      </ul>
+      <h3 className="text-amber-400 text-sm font-thin mt-4">Aviation</h3>
+      <ul className="flex justify-around gap-2 my-2">
+        <li className="w-2/5 flex flex-col gap-2 items-center justify-around ">
+          <h4 className="text-white text-sm font-thin italic">
+            <span>
+              &ldquo;profficient in aeronautical information management&rdquo;
+            </span>
+            <br />
+            <br />
+            <span>
+              &ldquo;experience in cartography, flight plan validation, notam
+              management, flight cordination, publication of aeronautical
+              products and maitaining &rdquo;
+            </span>
+            <br />
+            <br />
+            <span>
+              &ldquo;maintainance of aeronautical databases and AIXM dataset
+              management&rdquo;
+            </span>
+          </h4>
+        </li>
+        <li className="w-3/5 flex flex-col gap-2 items-center justify-around gap-2">
+          <img className="w-full rounded-lg" src="aviation.png" alt="mentor1" />
+        </li>
+      </ul>
     </div>
     <div className="bg-black my-5 p-5">
-      <p>Industries</p>
+      <h2 className="text-xl font-thin my-4 text-right mr-4">
+        Industrial Experience
+      </h2>
+      <ul className="flex justify-around gap-2 my-2">
+        <li className="text-amber-400 w-1/3 flex flex-col gap-2 items-center justify-around gap-2">
+          <FontAwesomeIcon icon={faPlane} size="2x" />
+
+          <p className="font-thin text-sm">Aviation</p>
+        </li>
+        <li className="text-amber-400 w-1/3 flex flex-col gap-2 items-center justify-around gap-2">
+          <FontAwesomeIcon icon={faBuildingColumns} size="2x" />
+          <p className="font-thin text-sm">Banking</p>
+        </li>
+        <li className="text-amber-400 w-1/3 flex flex-col gap-2 items-center justify-around gap-2">
+          <FontAwesomeIcon icon={faPhone} size="2x" />
+          <p className="font-thin text-sm">Telecom</p>
+        </li>
+      </ul>
     </div>
   </div>
 );
