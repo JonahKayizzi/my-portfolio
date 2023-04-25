@@ -5,7 +5,7 @@ const ContactInfo = () => {
   const age = currentYear - 1990;
 
   return (
-    <ul className="flex-col text-xs font-light px-3 py-2">
+    <ul className="flex-col text-xs font-thin px-3 py-2">
       <li>
         <p className="flex justify-between my-2">
           <span className="text-amber-400">Contact:</span>

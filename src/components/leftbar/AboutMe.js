@@ -16,8 +16,8 @@ const AboutMe = () => (
     <div className="p-3">
       <img className="rounded-full" src="head-shot.jpg" alt="Profile Pic" />
     </div>
-    <p className="font-bold m-1">Jonathan Kayizzi</p>
-    <p className="m-1 font-light">Full Stack Engineer</p>
+    <p className="font-normal m-1">Jonathan Kayizzi</p>
+    <p className="m-1 font-thin">Full Stack Engineer</p>
     <ul className="flex text-amber-400 gap-2 justify-between p-1 text-base">
       <li>
         <Link to="https://github.com/JonahKayizzi">
