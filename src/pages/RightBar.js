@@ -66,7 +66,7 @@ const RightBar = () => {
   };
 
   return (
-    <nav className="w-1/12 md:block sm:hidden">
+    <nav className="w-1/12 lg:block hidden">
       <div>
         <Menu
           isOpen={menuOpenState}

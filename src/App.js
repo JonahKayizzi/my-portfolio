@@ -9,7 +9,7 @@ import Publications from './components/Publications';
 import Awards from './components/Awards';
 
 const App = () => (
-  <div className="lg:w-7/12 sm:w-full">
+  <div className="lg:w-7/12 w-full">
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/projects" element={<Projects />} />

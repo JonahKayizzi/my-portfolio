@@ -18,8 +18,8 @@ body {
 
 #root {
   display: flex;
-  justify-content: space-between;
-  gap: 1.5em;
+  justify-content: left;
+  gap: 1em;
   background-color: rgba(20, 20, 20, 0.9);
   box-shadow: 0 0 0.5em 0.5em rgba(0, 0, 0, 0.3);
   flex-wrap: wrap;

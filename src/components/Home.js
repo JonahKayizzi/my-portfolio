@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Home = () => (
   <div className="container mx-auto">
     <div className="flex flex-wrap gap-4">
-      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-teal-800 md:my-5 my-1 p-5 rounded shadow-md shadow-black md:w-7/12 w-full">
+      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-teal-800 md:my-5 my-1 p-5 rounded shadow-md shadow-black md:w-7/12  w-full">
         <h2 className="text-xl font-thin my-4 text-left ml-4">
           Currently Working On
         </h2>

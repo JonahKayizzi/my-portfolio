@@ -69,7 +69,11 @@ const AboutMe = () => (
           </li>
         </ul>
         <div className="p-3">
-          <img className="rounded-full" src="head-shot.jpg" alt="Profile Pic" />
+          <img
+            className="animate-pulse rounded-full"
+            src="head-shot.jpg"
+            alt="Profile Pic"
+          />
         </div>
       </div>
     </div>

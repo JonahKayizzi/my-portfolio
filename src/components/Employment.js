@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const History = () => {
   const { employments } = useSelector((state) => state.employmentsSl);
   return (
-    <div className="flex flex-wrap gap-5">
+    <div className="flex flex-wrap justify-left gap-1">
       {employments.map((employment) => (
         <div
           key={employment}
-          className="bg-cyan-900 font-thin my-3 p-5 shadow-md shadow-black rounded-md w-5/12 border-t border-r border-amber-400"
+          className="bg-cyan-900 font-thin lg:my-3 my-1 p-2 shadow-md shadow-black rounded-md w-full border-t border-r border-amber-400"
         >
           <h2 className="text-xl my-4 text-left ml-4 flex justify-between">
             <Link className="text-amber-400 font-light" to={employment.link}>

@@ -21,7 +21,7 @@ const ContactInfo = () => (
     <div className="flex flex-col items-center gap-2 text-black font-light text-xs my-4 w-2/3">
       <Link
         to="mailto:jonahkayizzi@gmail.com?subject=Available for an opportunity?&body=Hi Jonathan,%20I%20would%20like%20to%20get%20to%20contact%20you%20regarding."
-        className="transform hover:scale-105 transition duration-300 ease-in-out p-2 border text-amber-400 border-amber-400 rounded"
+        className="animate-bounce transform hover:scale-105 transition duration-300 ease-in-out p-2 border text-amber-400 border-amber-400 rounded"
       >
         <span className="mx-2">CONTACT ME</span>
         <FontAwesomeIcon icon={faArrowRight} />
@@ -29,7 +29,7 @@ const ContactInfo = () => (
       <Link
         to="https://drive.google.com/file/d/1MgIsQ9KdpdOnkUlw4XI4fd1bNPscG-qI/view"
         target="_blank"
-        className="transform hover:scale-105 transition duration-300 ease-in-out p-2 border text-amber-400 border-amber-400 rounded"
+        className="animate-bounce transform hover:scale-105 transition duration-300 ease-in-out p-2 border text-amber-400 border-amber-400 rounded"
       >
         <span className="mx-2">DOWNLOAD CV</span>
         <FontAwesomeIcon icon={faDownload} />
