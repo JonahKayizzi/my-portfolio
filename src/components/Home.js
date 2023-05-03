@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Home = () => (
   <div className="container mx-auto">
     <div className="flex flex-wrap gap-4">
-      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-teal-800 md:my-5 my-1 p-5 rounded shadow-md shadow-black md:w-7/12  w-full">
+      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-teal-800 md:my-2 my-1 p-5 rounded shadow-md shadow-black md:w-7/12  w-full">
         <h2 className="text-xl font-thin my-4 text-left ml-4">
           Currently Working On
         </h2>
@@ -72,49 +72,49 @@ const Home = () => (
           </li>
         </ul>
       </div>
-      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-cyan-700 md:my-5 my-1 p-5 rounded shadow-md shadow-black md:w-1/3 w-full">
+      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-cyan-700 md:my-2 my-1 p-5 rounded shadow-md shadow-black md:w-1/3 w-full">
         <h2 className="text-xl font-thin my-4 text-right mr-4">
           Strong Skills
         </h2>
         <ul className="flex justify-around my-2">
           <li className="w-1/3 flex items-center justify-around gap-2 ">
-            <img className="w-1/3" src="react.png" alt="react" />
+            <img className="w-2/3" src="react.png" alt="react" />
           </li>
           <li className="w-1/3 flex items-center justify-around ">
-            <img className="w-1/3" src="java.png" alt="redux" />
+            <img className="w-2/3" src="java.png" alt="redux" />
           </li>
           <li className="w-1/3 flex items-center justify-around">
-            <img className="w-1/3" src="rails.png" alt="redux" />
+            <img className="w-2/3" src="rails.png" alt="redux" />
           </li>
         </ul>
         <ul className="flex flex-wrap justify-around my-2 text-xs font-thin gap-2 w-full">
-          <li className="flex w-1/4 justify-around gap-4 items-center m-0 p-1  rounded-md">
+          <li className="flex w-1/3 justify-center gap-4 items-center m-0 p-1  rounded-md">
             <FontAwesomeIcon icon={faStar} />
             REST API
           </li>
-          <li className="flex w-1/4 justify-around gap-2 items-center m-0 p-1  rounded-md">
+          <li className="flex w-1/3 justify-center gap-2 items-center m-0 p-1  rounded-md">
             <FontAwesomeIcon icon={faStar} />
             Microservices
           </li>
-          <li className="flex w-1/4 justify-around gap-2 items-center m-0 p-1 rounded-md">
+          <li className="flex w-1/3 justify-center gap-2 items-center m-0 p-1 rounded-md">
             <FontAwesomeIcon icon={faStar} />
             SQL
           </li>
-          <li className="flex w-1/4 justify-around gap-2 items-center m-0 p-1  rounded-md">
+          <li className="flex w-1/3 justify-center gap-2 items-center m-0 p-1  rounded-md">
             <FontAwesomeIcon icon={faStar} />
             Git
           </li>
-          <li className="flex w-1/4 justify-around gap-2 items-center  m-0 p-1  rounded-md">
+          <li className="flex w-1/3 justify-center gap-2 items-center  m-0 p-1  rounded-md">
             <FontAwesomeIcon icon={faStar} />
             Redux
           </li>
-          <li className="flex justify-around gap-2 items-center m-0 p-1  rounded-md">
+          <li className="flex justify-center gap-2 items-center m-0 p-1  rounded-md">
             <FontAwesomeIcon icon={faStar} />
             Remote collaboration
           </li>
         </ul>
       </div>
-      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-cyan-800 md:my-5 my-1 p-5 rounded shadow-md shadow-black md:w-1/2 w-full">
+      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-cyan-800 md:my-2 my-1 p-5 rounded shadow-md shadow-black md:w-1/2 w-full">
         <h2 className="text-xl font-thin my-4 text-right mr-4">
           Next Learning Goals
         </h2>
@@ -147,7 +147,7 @@ const Home = () => (
           </li>
         </ul>
       </div>
-      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-emerald-900 md:my-5 my-1 p-5 rounded shadow-md shadow-black md:w-2/5 w-full">
+      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-emerald-900 md:my-2 my-1 p-5 rounded shadow-md shadow-black md:w-2/5 w-full">
         <h2 className="text-xl font-thin my-4 text-right mr-4">
           Industrial Experience
         </h2>
@@ -167,7 +167,7 @@ const Home = () => (
           </li>
         </ul>
       </div>
-      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-cyan-900 md:my-5 my-1 p-5 rounded shadow-md shadow-black md:w-11/12 w-full">
+      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-cyan-900 md:my-2 my-1 p-5 rounded shadow-md shadow-black md:w-11/12 w-full">
         <h2 className="text-xl font-thin my-4 text-left ml-4">Besides Code</h2>
         <div className="flex flex-wrap">
           <div className="xl:w-1/2 w-full">
