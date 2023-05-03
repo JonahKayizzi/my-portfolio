@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFileCode,
   faHouse,
-  faComment,
   faBriefcase,
-  faGraduationCap,
-  faFeather,
-  faCertificate,
 } from '@fortawesome/free-solid-svg-icons';
+import { slide as Menu } from 'react-burger-menu';
 
 const links = [
   {
@@ -25,53 +22,88 @@ const links = [
     path: '/projects',
   },
   {
-    id: 3,
-    name: 'Recommendations',
-    icon: <FontAwesomeIcon icon={faComment} />,
-    path: '/recommendations',
-  },
-  {
     id: 4,
     name: 'Employment',
     icon: <FontAwesomeIcon icon={faBriefcase} />,
     path: '/employment',
   },
-  {
-    id: 5,
-    name: 'Education',
-    icon: <FontAwesomeIcon icon={faGraduationCap} />,
-    path: '/education',
-  },
-  {
-    id: 6,
-    name: 'Publications',
-    icon: <FontAwesomeIcon icon={faFeather} />,
-    path: '/publications',
-  },
-  {
-    id: 7,
-    name: 'Awards',
-    icon: <FontAwesomeIcon icon={faCertificate} />,
-    path: '/awards',
-  },
 ];
 
-const RightBar = () => (
-  <nav className="w-1/5 bg-black pt-12">
-    <div>
-      {links.map((link) => (
-        <NavLink
-          className="flex justify-start gap-3 items-center px-2 py-6 text-s font-light "
-          to={link.path}
-          activeclassname="active"
-          key={link.id}
+const RightBar = () => {
+  const [menuOpenState, setMenuOpenState] = useState(false);
+
+  const burgerstyles = {
+    bmBurgerButton: {
+      top: '12px',
+      left: '20px',
+      width: '40px',
+      height: '40px',
+      position: 'absolute',
+      padding: '1rem',
+    },
+    bmCrossButton: {
+      top: '5px',
+      position: 'absolute',
+      height: '48px',
+      width: '48px',
+      right: '12px',
+    },
+    bmCross: {
+      display: 'inline-block',
+      height: '45px',
+      width: '5px',
+      top: '-2px',
+      right: '7px',
+    },
+  };
+
+  const handleStateChange = (state) => {
+    setMenuOpenState(state.isOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpenState(false);
+  };
+
+  return (
+    <nav>
+      <div className="lg:w-1/12 lg:contents hidden">
+        {links.map((link) => (
+          <NavLink
+            className="transform hover:scale-105 transition duration-300 ease-in-out flex flex-col text-amber-400 items-center justify-end gap-2 py-6 px-2 text-xl font-light my-2 bg-cyan-900 rounded-md shadow-md shadow-black border-y border-amber-400"
+            to={link.path}
+            activeclassname="active"
+            key={link.id}
+            onClick={() => closeMenu()}
+          >
+            {link.icon}
+            <span className="text-xs">{link.name}</span>
+          </NavLink>
+        ))}
+      </div>
+      <div className="w-screen lg:hidden contents">
+        <Menu
+          isOpen={menuOpenState}
+          onStateChange={(state) => handleStateChange(state)}
+          styles={burgerstyles}
+          width="100%"
         >
-          {link.icon}
-          {link.name}
-        </NavLink>
-      ))}
-    </div>
-  </nav>
-);
+          {links.map((link) => (
+            <NavLink
+              className="transform hover:scale-105 transition duration-300 ease-in-out flex flex-col text-amber-400 items-center justify-end gap-2 py-6 px-2 text-xl font-light my-2 bg-cyan-900 rounded-md shadow-md shadow-black border-y border-amber-400"
+              to={link.path}
+              activeclassname="active"
+              key={link.id}
+              onClick={() => closeMenu()}
+            >
+              {link.icon}
+              <span className="lg:text-xs text-md m-4">{link.name}</span>
+            </NavLink>
+          ))}
+        </Menu>
+      </div>
+    </nav>
+  );
+};
 
 export default RightBar;

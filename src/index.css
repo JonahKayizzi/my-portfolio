@@ -4,33 +4,23 @@
 
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 7.1% 8.3%;
+  padding: 2% 2%;
   background-color: rgba(0, 0, 0, 0.9);
 }
 
 #root {
   display: flex;
-  justify-content: space-between;
-  gap: 1.2em;
+  justify-content: left;
+  gap: 1em;
   background-color: rgba(20, 20, 20, 0.9);
   box-shadow: 0 0 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
 }
 
 code {
@@ -50,6 +40,64 @@ ul {
 }
 
 .active {
-  color: #fff;
+  color: #164e63;
   background-color: #fbbf24;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  transition: ease-out 0.5s;
+}
+
+.bm-burger-button {
+  top: 15px;
+  left: 20px;
+  position: absolute;
+  padding: 1rem;
+}
+
+.bm-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(19, 78, 74, 1);
+}
+
+.bm-menu {
+  background: rgba(19, 78, 74, 0.8);
+  width: 100vw;
+}
+
+.bm-menu-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bm-item-list {
+  position: relative;
+  top: 56px;
+  height: 100%;
+  width: 100%;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin: 0.5em 1em;
+  color: white;
+}
+
+.bm-burger-bars {
+  background: rgba(251, 191, 36, 0.5);
+  border-radius: 2px;
+}
+
+.bm-cross {
+  border-radius: 2px;
+  background: #fbbf24;
 }

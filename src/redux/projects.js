@@ -64,7 +64,7 @@ const initialState = {
       name: 'Space Travellers Hub',
       rank: 4,
       source: 'https://github.com/JonahKayizzi/space-travellers-hub',
-      demo: 'https://cosmic-sundae-27c46b.netlify.app/missions',
+      demo: 'https://cosmic-sundae-27c46b.netlify.app/',
       images: ['images/SPACEX.jpg'],
       tools: [
         'Redux',
