@@ -1,41 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Slider from 'react-slick';
 
 const Modal = ({ isModalOpen, item }) => {
   if (!isModalOpen) return null;
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-white rounded-lg shadow-lg overflow-hidden">
-        <button type="button">
-          <span className="text-2xl text-gray-600 m-0 p-1 bg-gray-200 rounded-md">
+    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 z-50">
+      <div className=" flex flex-col items-center p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-11/12 bg-white rounded-lg shadow-lg">
+        <button type="button" className="absolute left-full">
+          <span className="text-2xl text-amber-400 hover:bg-teal-900 m-0 px-1 bg-cyan-900">
             X
           </span>
         </button>
-        <Slider
-          dots={settings.dots}
-          infinite={settings.infinite}
-          speed={settings.speed}
-          slidesToShow={settings.slidesToShow}
-          slidesToScroll={settings.slidesToScroll}
-        >
-          {item.images.map((image) => (
-            <div
-              key={image}
-              className="w-full h-3/4 bg-cover bg-center"
-              style={{ backgroundImage: `url(${image})` }}
-            />
-          ))}
-        </Slider>
+        <img className="w-2/3 " src={item.images} alt={item.images} />
         <div className="p-4">
           <h1 className="text-md font-bold text-gray-800">{item.name}</h1>
           <p className="mt-2 text-gray-600 text-sm">{item.description}</p>
