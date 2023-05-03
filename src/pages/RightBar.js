@@ -66,8 +66,22 @@ const RightBar = () => {
   };
 
   return (
-    <nav className="w-1/12 lg:block hidden">
-      <div>
+    <nav>
+      <div className="lg:w-1/12 lg:contents hidden">
+        {links.map((link) => (
+          <NavLink
+            className="transform hover:scale-105 transition duration-300 ease-in-out flex flex-col text-amber-400 items-center justify-end gap-2 py-6 px-2 text-xl font-light my-2 bg-cyan-900 rounded-md shadow-md shadow-black border-y border-amber-400"
+            to={link.path}
+            activeclassname="active"
+            key={link.id}
+            onClick={() => closeMenu()}
+          >
+            {link.icon}
+            <span className="text-xs">{link.name}</span>
+          </NavLink>
+        ))}
+      </div>
+      <div className="w-screen lg:hidden contents">
         <Menu
           isOpen={menuOpenState}
           onStateChange={(state) => handleStateChange(state)}
@@ -83,24 +97,10 @@ const RightBar = () => {
               onClick={() => closeMenu()}
             >
               {link.icon}
-              <span className="text-xs">{link.name}</span>
+              <span className="lg:text-xs text-md m-4">{link.name}</span>
             </NavLink>
           ))}
         </Menu>
-      </div>
-      <div className="hidden md:block">
-        {links.map((link) => (
-          <NavLink
-            className="transform hover:scale-105 transition duration-300 ease-in-out flex flex-col text-amber-400 items-center justify-end gap-2 py-6 px-2 text-xl font-light my-2 bg-cyan-900 rounded-md shadow-md shadow-black border-y border-amber-400"
-            to={link.path}
-            activeclassname="active"
-            key={link.id}
-            onClick={() => closeMenu()}
-          >
-            {link.icon}
-            <span className="text-xs">{link.name}</span>
-          </NavLink>
-        ))}
       </div>
     </nav>
   );

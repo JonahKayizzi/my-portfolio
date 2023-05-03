@@ -6,7 +6,7 @@ const Modal = ({ isModalOpen, item }) => {
   if (!isModalOpen) return null;
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 z-50">
+    <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80 z-50">
       <div className=" flex flex-col items-center p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-3/4 w-11/12  h-11/12 bg-white rounded-lg shadow-lg">
         <button type="button" className="absolute left-full">
           <span className="text-2xl text-amber-400 hover:bg-teal-900 m-0 px-1 bg-cyan-900">
