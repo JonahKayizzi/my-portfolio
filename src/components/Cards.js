@@ -55,13 +55,17 @@ const Cards = ({ items }) => {
                 )}
               </ul>
               <div className="flex justify-around items-center mt-4 text-xs">
+                {item.demo && (
+                  <Link
+                    to={item.demo}
+                    target="_blank"
+                    className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
+                  >
+                    Live Project
+                  </Link>
+                )}
                 <Link
-                  to={item.demo}
-                  className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
-                >
-                  Live Project
-                </Link>
-                <Link
+                  target="_blank"
                   to={item.source}
                   className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
                 >

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
+import { Link } from 'react-router-dom';
 
 const Modal = ({ isModalOpen, item }) => {
   if (!isModalOpen) return null;
@@ -27,18 +28,22 @@ const Modal = ({ isModalOpen, item }) => {
             ))}
           </ul>
           <div className="flex justify-around items-center mt-4 text-xs">
-            <a
-              href={item.demo}
-              className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
-            >
-              Live Project
-            </a>
-            <a
-              href={item.source}
+            {item.demo && (
+              <Link
+                to={item.demo}
+                target="_blank"
+                className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
+              >
+                Live Project
+              </Link>
+            )}
+            <Link
+              to={item.source}
+              target="_blank"
               className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
             >
               View Source
-            </a>
+            </Link>
           </div>
         </div>
       </div>

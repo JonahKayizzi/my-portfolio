@@ -12,9 +12,17 @@ const History = () => {
           className="bg-cyan-900 font-thin lg:my-3 my-1 p-2 shadow-md shadow-black rounded-md w-full border-t border-r border-amber-400"
         >
           <h2 className="text-xl my-4 text-left ml-4 flex justify-between">
-            <Link className="text-amber-400 font-light" to={employment.link}>
-              {employment.name}
-            </Link>
+            {employment.link ? (
+              <Link
+                className="text-amber-400 font-light"
+                to={employment.link}
+                target="_blank"
+              >
+                {employment.name}
+              </Link>
+            ) : (
+              <p className="text-amber-400 font-light">{employment.name}</p>
+            )}
             <p className="italic text-lg">{employment.location}</p>
           </h2>
           <ul className="flex justify-between text-sm">

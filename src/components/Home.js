@@ -16,7 +16,7 @@ const Home = () => (
           Currently Working On
         </h2>
         <ul className="flex justify-around my-2">
-          <li className="w-1/3 flex flex-col gap-2 items-center bg-teal-700 shadow shadow-white p-2 m-2">
+          <li className="w-1/2 flex flex-col gap-2 items-center bg-teal-700 shadow shadow-white p-2 m-2">
             <p className="text-center font-thin text-sm">
               <span>
                 Air Navigation Services - Safety Management Sytems App
@@ -27,31 +27,22 @@ const Home = () => (
               </span>
             </p>
             <div className="flex justify-around">
-              <img className="w-1/6" src="java.png" alt="react" />
-              <img className="w-1/6" src="react.png" alt="react" />
+              <img
+                className="w-1/4 bg-white rounded rounded-full"
+                src="java.png"
+                alt="java"
+              />
+              <img className="w-1/4" src="react.png" alt="react" />
             </div>
             <Link
               className="text-amber-400 text-sm font-thin"
+              target="_blank"
               to="https://github.com/JonahKayizzi/ANS-SMS-Java-React"
             >
               View Repo
             </Link>
           </li>
-          <li className="w-1/3 flex flex-col gap-2 items-center bg-teal-700 shadow shadow-white p-2 m-2">
-            <p className="text-center font-thin text-sm">
-              <span>Live Chat App</span>
-              <br />
-              <span className="italic">Rails & React</span>
-            </p>
-            <div className="flex justify-around">
-              <img className="w-1/6" src="rails.png" alt="react" />
-              <img className="w-1/6" src="react.png" alt="react" />
-            </div>
-            <Link className="text-amber-400 text-sm font-thin" to="/projects/1">
-              View Repo
-            </Link>
-          </li>
-          <li className="w-1/3 flex flex-col gap-2 items-center bg-teal-700 shadow shadow-white p-2 m-2">
+          <li className="w-1/2 flex flex-col gap-2 items-center bg-teal-700 shadow shadow-white p-2 m-2">
             <p className="text-center font-thin text-sm">
               <span>
                 B2B networking App for micro, small & medium enterprises
@@ -60,12 +51,13 @@ const Home = () => (
               <span className="italic">PHP to Rails migration</span>
             </p>
             <div className="flex justify-around">
-              <img className="w-1/6" src="rails.png" alt="react" />
-              <img className="w-1/6" src="react.png" alt="react" />
+              <img className="w-1/4" src="rails.png" alt="react" />
+              <img className="w-1/4" src="react.png" alt="react" />
             </div>
             <Link
               className="text-amber-400 text-sm font-thin"
               to="https://github.com/JonahKayizzi/Yunga-React-Rails-BackEnd"
+              target="_blank"
             >
               View Repo
             </Link>
@@ -81,7 +73,11 @@ const Home = () => (
             <img className="w-2/3" src="react.png" alt="react" />
           </li>
           <li className="w-1/3 flex items-center justify-around ">
-            <img className="w-2/3" src="java.png" alt="redux" />
+            <img
+              className="w-2/3 bg-white rounded rounded-full"
+              src="java.png"
+              alt="java"
+            />
           </li>
           <li className="w-1/3 flex items-center justify-around">
             <img className="w-2/3" src="rails.png" alt="redux" />

@@ -47,7 +47,6 @@ const initialState = {
     },
     {
       name: 'Cyber Dynamics Startup',
-      link: 'https://www.cyberdynamics.co.ug/',
       location: 'Kampala, Uganda',
       role: 'Back-end Developer',
       type: 'Full Time',

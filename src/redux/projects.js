@@ -6,7 +6,6 @@ const initialState = {
       name: 'Air Navigation Services - Safety Management System',
       rank: 1,
       source: 'https://github.com/JonahKayizzi/ANS-SMS-APP',
-      demo: 'http://10.10.32.45/sms/private/',
       images: ['images/SMS.jpg'],
       tools: [
         'PHP',
