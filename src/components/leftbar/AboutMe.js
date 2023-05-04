@@ -22,27 +22,33 @@ const AboutMe = () => (
     <div className="flex items-center justify-between">
       <ul className="w-1/5 flex flex-col text-amber-400 gap-5 justify-between p-1 text-base">
         <li>
-          <Link to="https://github.com/JonahKayizzi">
+          <Link to="https://github.com/JonahKayizzi" target="_blank">
             <FontAwesomeIcon icon={faGithub} />
           </Link>
         </li>
         <li>
-          <Link to="https://www.linkedin.com/in/jonathan-kayizzi/">
+          <Link
+            to="https://www.linkedin.com/in/jonathan-kayizzi/"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </Link>
         </li>
         <li>
-          <Link to="https://www.youtube.com/@jonathankayizzi1241">
+          <Link
+            to="https://www.youtube.com/@jonathankayizzi1241"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faYoutube} />
           </Link>
         </li>
         <li>
-          <Link to="https://twitter.com/JonahKayizzi">
+          <Link to="https://twitter.com/JonahKayizzi" target="_blank">
             <FontAwesomeIcon icon={faTwitter} />
           </Link>
         </li>
         <li>
-          <Link to="https://www.instagram.com/jonahkayizzi/">
+          <Link to="https://www.instagram.com/jonahkayizzi/" target="_blank">
             <FontAwesomeIcon icon={faInstagram} />
           </Link>
         </li>
