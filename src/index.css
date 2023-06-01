@@ -16,20 +16,15 @@ body {
 
 #root {
   display: flex;
-  justify-content: left;
+  flex-direction: column;
   gap: 1em;
+  padding: 1.5em;
   background-color: rgba(20, 20, 20, 0.9);
   box-shadow: 0 0 0.5em 0.5em rgba(0, 0, 0, 0.3);
-  flex-wrap: wrap;
 }
 
 code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -40,10 +35,7 @@ ul {
 }
 
 .active {
-  color: #164e63;
-  background-color: #fbbf24;
-  padding-top: 6em;
-  padding-bottom: 6em;
+  color: #fbbf24;
   transition: ease-out 0.5s;
 }
 
