@@ -9,10 +9,10 @@ import Publications from './components/Publications';
 import Awards from './components/Awards';
 
 const App = () => (
-  <div className="lg:w-7/12 w-full">
+  <div className="w-full px-8 shadow-md shadow-black">
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/projects" element={<Projects />} />
+      <Route exact path="/skills" element={<Home />} />
+      <Route exact path="/" element={<Projects />} />
       <Route exact path="/recommendations" element={<Recommendations />} />
       <Route exact path="/employment" element={<Employment />} />
       <Route exact path="/education" element={<Education />} />

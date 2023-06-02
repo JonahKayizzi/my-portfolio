@@ -41,23 +41,6 @@ const initialState = {
         'The Space Travellers hub is web application that works with real live data from the SpaceX API. The app is for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.',
     },
     {
-      name: 'Bit Ticker',
-      rank: 5,
-      source: 'https://github.com/JonahKayizzi/BitTicker',
-      demo: 'https://roaring-swan-c9fce0.netlify.app/',
-      images: ['images/BitTickerMobile.png'],
-      tools: [
-        'REST API',
-        'React',
-        'Redux',
-        'Jest',
-        'React Testing Library',
-        'JavaScript',
-      ],
-      description:
-        'Your final stop for crypto statistics and analysis. BitTicker is a mobile web application that displays a list of metrics (crypto statistics) via a public API.',
-    },
-    {
       name: 'Book Store',
       rank: 6,
       source: 'https://github.com/JonahKayizzi/bookstore-react-redux',
@@ -106,6 +89,23 @@ const initialState = {
       ],
       description:
         'The Leaderboard App displays scores submitted by different players, allows you to submit your score and all data is preserved in the Leaderboard API service.',
+    },
+    {
+      name: 'Bit Ticker',
+      rank: 5,
+      source: 'https://github.com/JonahKayizzi/BitTicker',
+      demo: 'https://roaring-swan-c9fce0.netlify.app/',
+      images: ['images/BitTickerMobile.png'],
+      tools: [
+        'REST API',
+        'React',
+        'Redux',
+        'Jest',
+        'React Testing Library',
+        'JavaScript',
+      ],
+      description:
+        'Your final stop for crypto statistics and analysis. BitTicker is a mobile web application that displays a list of metrics (crypto statistics) via a public API.',
     },
   ],
   searchedProjects: [],

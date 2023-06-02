@@ -23,12 +23,13 @@ const ContactInfo = () => (
         <span>Engineer</span>
       </p>
     </h1>
-    <p className="text-md my-2 font-thin px-2">
+    <p className="text-md my-2 font-thin px-2 text-gray-400">
       Currently focussed on building innovative, scalable and maintainable
-      applications using micro services architecture.
+      applications using micro services architecture. Part-timing as a mentor
+      for junior full-stack web developers at Microverse.
     </p>
     <div className="w-4/5">
-      <ul className="flex justify-around gap-4 text-xs font-thin p-3">
+      <ul className="flex justify-around gap-4 text-xs font-thin p-3 text-gray-400">
         <li className="">
           <p className="flex justify-end gap-3 my-2">
             <FontAwesomeIcon className="text-amber-400" icon={faHouse} />

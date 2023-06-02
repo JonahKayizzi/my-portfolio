@@ -19,13 +19,13 @@ const links = [
     id: 2,
     name: 'Projects',
     icon: <FontAwesomeIcon icon={faFileCode} />,
-    path: '/projects',
+    path: '/#projects',
   },
   {
     id: 3,
     name: 'Skills',
     icon: <FontAwesomeIcon icon={faFileCode} />,
-    path: '/projects',
+    path: '/skills',
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ const RightBar = () => {
 
   return (
     <nav>
-      <div className="flex justify-between gap-4 px-8 shadow-md shadow-black py-2">
+      <div className="w-11/12 flex justify-between gap-4 px-8 shadow-md shadow-black pb-2 fixed">
         <div>
           <NavLink
             className="text-amber-400 text-xl font-black mr-4"

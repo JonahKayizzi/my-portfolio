@@ -23,11 +23,13 @@ const Projects = () => {
 
   const displayedProjects = searchedProjects.length !== 0 ? searchedProjects : projects;
   return (
-    <div className="flex flex-col items-center">
-      <h3 className="py-4 font-bold">My Projects</h3>
+    <div id="projects" className="flex flex-col items-center">
+      <h3 className="py-4 font-extrabold place-self-start text-xl">
+        My Projects
+      </h3>
       <form className="p-6 w-5/6">
         <input
-          className="transform hover:scale-105 transition duration-300 ease-in-out bg-gray-50 w-full rounded-lg text-gray-900 text-sm border-gray-300 border-2 focus:outline-none focus:border-amber-400 px-4 py-2 dark:bg-gray-800 dark:text-gray-100"
+          className="transform hover:scale-105 transition duration-300 ease-in-out bg-gray-50 w-full text-gray-900 text-sm border-gray-300 border-2 focus:outline-none focus:border-amber-400 px-4 py-2 dark:bg-gray-800 dark:text-gray-100"
           type="text"
           name="title"
           placeholder="Search for projects by technology; e.g. React, Redux, Ruby on Rails, Java, PHP, etc."
