@@ -84,7 +84,7 @@ const Cards = ({ items }) => {
       {numItems < items.length ? (
         <button
           onClick={handleLoadMore}
-          className="transform hover:scale-105 transition duration-300 ease-in-out hover:text-white text-amber-400 font-bold py-2 px-4 p-3 my-10 px-6"
+          className="transform text-xs hover:bg-amber-400 bg-gray-400 transition duration-300 ease-in-out hover:text-white text-black font-light py-4 my-10 w-full"
           type="button"
         >
           LOAD MORE . . .

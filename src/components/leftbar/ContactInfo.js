@@ -26,7 +26,8 @@ const ContactInfo = () => (
     <p className="text-md my-2 font-thin px-2 text-gray-400">
       Currently focussed on building innovative, scalable and maintainable
       applications using micro services architecture. Part-timing as a mentor
-      for junior full-stack web developers at Microverse.
+      for junior full-stack web developers at Microverse. And exploring database
+      driven aeronautical chart production.
     </p>
     <div className="w-4/5">
       <ul className="flex justify-around gap-4 text-xs font-thin p-3 text-gray-400">
