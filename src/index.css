@@ -18,7 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5em;
-  padding: 1.5em;
+  padding: 1em;
+  padding-top: 0.5em;
   width: 100%;
   background: url('../public/backgroundimg.png') 95% 10% no-repeat,
     url('../public/backgroundimg2.png') 10% 95% no-repeat;

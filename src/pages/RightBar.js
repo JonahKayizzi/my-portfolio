@@ -73,7 +73,7 @@ const RightBar = () => {
 
   return (
     <nav>
-      <div className="w-11/12 flex justify-between gap-4 px-8 shadow-md shadow-black pb-2 fixed">
+      <div className="w-11/12 flex justify-between gap-4 px-8 shadow-md shadow-black py-4 fixed bg-[rgb(25,25,25)]">
         <div>
           <NavLink
             className="text-amber-400 text-xl font-black mr-4"

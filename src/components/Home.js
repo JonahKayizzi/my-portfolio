@@ -10,14 +10,24 @@ import { Link } from 'react-router-dom';
 
 const Home = () => (
   <div className="container mx-auto">
-    <div className="flex flex-wrap gap-4">
-      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-teal-800 md:my-2 my-1 p-5 rounded shadow-md shadow-black md:w-7/12  w-full">
-        <h2 className="text-xl font-thin my-4 text-left ml-4">
-          Currently Working On
-        </h2>
-        <ul className="flex justify-around my-2">
-          <li className="w-1/2 flex flex-col gap-2 items-center bg-teal-700 shadow shadow-white p-2 m-2">
-            <p className="text-center font-thin text-sm">
+    <div className="flex flex-wrap gap-4 bg-[rgb(25,25,25)]">
+      <h3 className="py-2 font-extrabold place-self-start text-xl w-full">
+        My Skills & Learning Goals
+      </h3>
+      <div className="md:my-2 my-1 p-1 rounded md:w-7/12  w-full">
+        <h4 className="text-lg font-thin my-1 text-gray-400">
+          Currently working on:
+        </h4>
+        <ul className="flex justify-around my-2 text-gray-400">
+          <li className="w-1/2 flex flex-col gap-2 p-2 m-2">
+            <Link
+              className="text-amber-400 text-sm font-thin"
+              target="_blank"
+              to="https://github.com/JonahKayizzi/ANS-SMS-Java-React"
+            >
+              View Repo
+            </Link>
+            <p className="font-thin text-sm">
               <span>
                 Air Navigation Services - Safety Management Sytems App
               </span>
@@ -34,15 +44,15 @@ const Home = () => (
               />
               <img className="w-1/4" src="react.png" alt="react" />
             </div>
+          </li>
+          <li className="w-1/2 flex flex-col gap-2 items-center p-2 m-2">
             <Link
               className="text-amber-400 text-sm font-thin"
+              to="https://github.com/JonahKayizzi/Yunga-React-Rails-BackEnd"
               target="_blank"
-              to="https://github.com/JonahKayizzi/ANS-SMS-Java-React"
             >
               View Repo
             </Link>
-          </li>
-          <li className="w-1/2 flex flex-col gap-2 items-center bg-teal-700 shadow shadow-white p-2 m-2">
             <p className="text-center font-thin text-sm">
               <span>
                 B2B networking App for micro, small & medium enterprises
@@ -54,20 +64,14 @@ const Home = () => (
               <img className="w-1/4" src="rails.png" alt="react" />
               <img className="w-1/4" src="react.png" alt="react" />
             </div>
-            <Link
-              className="text-amber-400 text-sm font-thin"
-              to="https://github.com/JonahKayizzi/Yunga-React-Rails-BackEnd"
-              target="_blank"
-            >
-              View Repo
-            </Link>
           </li>
         </ul>
+        <h4 className="text-lg font-thin my-1 text-gray-400">
+          Next learning goals:
+        </h4>
       </div>
-      <div className="transform hover:scale-105 transition duration-300 ease-in-out bg-cyan-700 md:my-2 my-1 p-5 rounded shadow-md shadow-black md:w-1/3 w-full">
-        <h2 className="text-xl font-thin my-4 text-right mr-4">
-          Strong Skills
-        </h2>
+      <div className="md:my-2 my-1 p-1 md:w-1/3 w-full">
+        <h4 className="text-xl font-thin my-4mr-4">Languages</h4>
         <ul className="flex justify-around my-2">
           <li className="w-1/3 flex items-center justify-around gap-2 ">
             <img className="w-2/3" src="react.png" alt="react" />
