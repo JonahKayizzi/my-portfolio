@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Cards = ({ items }) => {
+const Cards = ({ items, handleModal }) => {
   const [numItems, setNumItems] = useState(4);
   const handleLoadMore = () => {
     setNumItems(numItems + 4);
@@ -13,6 +13,7 @@ const Cards = ({ items }) => {
       {items.slice(0, numItems).map((item) => (
         <button
           className="md:w-1/2 w-full p-2 transform hover:scale-105 transition duration-300 ease-in-out"
+          onClick={() => handleModal(item)}
           key={item.rank}
           type="button"
         >
@@ -83,6 +84,7 @@ const Cards = ({ items }) => {
 
 Cards.propTypes = {
   items: PropTypes.isRequired,
+  handleModal: PropTypes.isRequired,
 };
 
 export default Cards;

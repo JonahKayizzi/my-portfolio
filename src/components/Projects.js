@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Cards from './Cards';
 import { searchProjects } from '../redux/projects';
+// eslint-disable-next-line import/no-named-as-default
 import Modal from './Modal';
 
 const Projects = () => {
   const { projects, searchedProjects } = useSelector(
-    (state) => state.projectsSli,
+    (state) => state.projectsSli
   );
 
   const [modalOpen, setModalOpen] = useState(false); // State for modal visibility
@@ -35,7 +36,8 @@ const Projects = () => {
     setModalOpen(false);
   };
 
-  const displayedProjects = searchedProjects.length !== 0 ? searchedProjects : projects;
+  const displayedProjects =
+    searchedProjects.length !== 0 ? searchedProjects : projects;
   return (
     <div id="projects" className="flex flex-col items-center">
       <h3 className="py-2 flex font-extrabold place-self-start text-xl w-full bg-[rgb(25,25,25)]">
