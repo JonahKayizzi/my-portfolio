@@ -1,28 +1,20 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Modal from './Modal';
 
 const Cards = ({ items }) => {
   const [numItems, setNumItems] = useState(4);
-  const [modalStates, setModalStates] = useState(items.map(() => false));
-
   const handleLoadMore = () => {
     setNumItems(numItems + 4);
   };
 
-  const handleModal = (index) => {
-    setModalStates((prev) => prev.map((state, i) => (i === index ? !state : state)));
-  };
-
   return (
     <div className="flex flex-wrap mb-10 justify-start">
-      {items.slice(0, numItems).map((item, index) => (
+      {items.slice(0, numItems).map((item) => (
         <button
           className="md:w-1/2 w-full p-2 transform hover:scale-105 transition duration-300 ease-in-out"
-          type="button"
-          onClick={() => handleModal(index)}
           key={item.rank}
+          type="button"
         >
           <div className="overflow-hidden">
             <div
@@ -74,11 +66,6 @@ const Cards = ({ items }) => {
               </div>
             </div>
           </div>
-          <Modal
-            item={item}
-            isModalOpen={modalStates[index]}
-            handleModal={() => handleModal(index)}
-          />
         </button>
       ))}
       {numItems < items.length ? (

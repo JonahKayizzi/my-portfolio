@@ -8,10 +8,11 @@ const Home = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-wrap">
-        <h3 className="py-2 font-extrabold place-self-start text-xl w-full bg-[rgb(25,25,25)]">
-          My Skills & Learning Goals
+        <h3 className="py-2 flex font-extrabold place-self-start text-xl w-full bg-[rgb(25,25,25)]">
+          <span className="w-1/2">My Skills & Learning Goals</span>
+          <span className="bottom-0 left-0 w-full h-0.5 bg-amber-500 mt-4" />
         </h3>
-        <div className="md:my-2 my-1 p-1 rounded md:w-5/12 w-full bg-[rgb(25,25,25)]">
+        <div className="border-l-2 border-amber-400 md:my-2 my-1 p-3 rounded md:w-5/12 w-full bg-[rgb(25,25,25)]">
           <h4 className="text-md font-thin my-1 text-gray-300">
             Currently working on:
           </h4>
@@ -146,7 +147,7 @@ const Home = () => {
             </li>
           </ul>
         </div>
-        <div className="md:my-2 my-1 p-5 rounded md:w-11/12 w-full">
+        <div className="border-l-2 border-amber-400 md:my-2 my-1 p-5 rounded md:w-11/12 w-full">
           <div className="flex gap-8">
             <div className="xl:w-1/2 w-full bg-[rgb(25,25,25)]">
               <div

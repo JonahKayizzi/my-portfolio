@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Cards from './Cards';
 import { searchProjects } from '../redux/projects';
+import Modal from './Modal';
 
 const Projects = () => {
   const { projects, searchedProjects } = useSelector(
     (state) => state.projectsSli,
   );
+
+  const [modalOpen, setModalOpen] = useState(false); // State for modal visibility
+  const [selectedProject, setSelectedProject] = useState(null); // State to store selected project
+
   const dispatch = useDispatch();
 
   const [search, setSearch] = useState({
@@ -21,11 +26,21 @@ const Projects = () => {
     dispatch(searchProjects(search.title));
   };
 
+  const handleModal = (project) => {
+    setSelectedProject(project);
+    setModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+
   const displayedProjects = searchedProjects.length !== 0 ? searchedProjects : projects;
   return (
     <div id="projects" className="flex flex-col items-center">
-      <h3 className="py-4 font-extrabold place-self-start text-xl">
-        My Projects
+      <h3 className="py-2 flex font-extrabold place-self-start text-xl w-full bg-[rgb(25,25,25)]">
+        <span className="w-1/3">My Projects</span>
+        <span className="bottom-0 left-0 w-full h-0.5 bg-amber-500 mt-4" />
       </h3>
       <form className="p-6 w-5/6">
         <input
@@ -36,7 +51,10 @@ const Projects = () => {
           onChange={handleSearch}
         />
       </form>
-      <Cards items={displayedProjects} />
+      <Cards items={displayedProjects} handleModal={handleModal} />
+      {modalOpen && (
+        <Modal project={selectedProject} handleClose={handleModalClose} />
+      )}
     </div>
   );
 };
