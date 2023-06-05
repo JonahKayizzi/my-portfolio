@@ -29,6 +29,7 @@ const initialState = {
       end: 'Present',
       duration: '6 years',
       highlights: [
+        'Supervised activities for developing over 20 database-driven aeronautical charts',
         'Built a subscription management application for aeronautical products using PHP and MySQL that improved work efficiency and revenue by 70%.',
         'Led a team of 4 developers, fixed over 40 pending functional requirements of the Safety Management system in absence of the contractor and migrated from PHP to Java.',
       ],
