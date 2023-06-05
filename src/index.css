@@ -16,11 +16,13 @@ body {
 
 #root {
   display: flex;
-  justify-content: left;
-  gap: 1em;
-  background-color: rgba(20, 20, 20, 0.9);
-  box-shadow: 0 0 0.5em 0.5em rgba(0, 0, 0, 0.3);
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 5em;
+  padding: 1em;
+  padding-top: 0.5em;
+  width: 100%;
+  background: url('../public/backgroundimg.png') 95% 10% no-repeat;
+  background-size: 30%;
 }
 
 code {
@@ -40,10 +42,7 @@ ul {
 }
 
 .active {
-  color: #164e63;
-  background-color: #fbbf24;
-  padding-top: 6em;
-  padding-bottom: 6em;
+  color: #fbbf24;
   transition: ease-out 0.5s;
 }
 
@@ -100,4 +99,22 @@ ul {
 .bm-cross {
   border-radius: 2px;
   background: #fbbf24;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 2s infinite;
 }

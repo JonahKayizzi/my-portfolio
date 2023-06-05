@@ -1,90 +1,77 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Modal from './Modal';
 
 const Cards = ({ items }) => {
-  const [numItems, setNumItems] = useState(2);
-  const [modalStates, setModalStates] = useState(items.map(() => false));
-
+  const [numItems, setNumItems] = useState(4);
   const handleLoadMore = () => {
-    setNumItems(numItems + 2);
-  };
-
-  const handleModal = (index) => {
-    setModalStates((prev) => prev.map((state, i) => (i === index ? !state : state)));
+    setNumItems(numItems + 4);
   };
 
   return (
-    <div className="flex flex-wrap mb-10 justify-center">
-      {items.slice(0, numItems).map((item, index) => (
+    <div className="flex flex-wrap mb-10 justify-start">
+      {items.slice(0, numItems).map((item) => (
         <button
-          className="md:w-1/2 w-full p-2 shadow shadow-black transform hover:scale-105 transition duration-300 ease-in-out"
-          type="button"
-          onClick={() => handleModal(index)}
+          className="md:w-1/2 w-full p-2 transform hover:scale-105 transition duration-300 ease-in-out"
           key={item.rank}
+          type="button"
         >
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="overflow-hidden">
             <div
-              className="w-full h-48 bg-cover bg-center"
-              style={{ backgroundImage: `url(${item.images})` }}
-            />
-            <div className="p-4">
-              <h1 className="text-md font-bold text-gray-800">
-                {item.name.length > 30
-                  ? `${item.name.slice(0, 30)}...`
-                  : item.name}
-              </h1>
-              <p className="mt-2 text-gray-600 text-sm">
-                {item.description.length > 100
-                  ? `${item.description.slice(0, 100)}...`
-                  : item.description}
-              </p>
-              <ul className="flex justify-around flex-wrap gap-2 mt-2">
-                {item.tools.slice(0, 5).map((tool) => (
-                  <li key={tool}>
-                    <span className="text-xs text-gray-600 m-0 p-1 bg-gray-200 rounded-md">{`${tool}`}</span>
-                  </li>
-                ))}
-                {item.tools.length > 5 && (
-                  <li>
-                    <span className="text-xs text-gray-600 m-0 p-1 bg-gray-200 rounded-md">
-                      {`+${item.tools.length - 5}`}
-                    </span>
-                  </li>
-                )}
-              </ul>
-              <div className="flex justify-around items-center mt-4 text-xs">
-                {item.demo && (
+              className="w-full h-72 bg-contain bg-center bg-white"
+              style={{
+                backgroundImage: `url(${item.images})`,
+                backgroundSize: '80%',
+                backgroundRepeat: 'no-repeat',
+              }}
+            >
+              <div className="p-6 bg-gradient-to-b from-gray-400 to-transparent flex-col">
+                <h1 className="text-xl font-bold text-white text-left">
+                  {item.name.length > 30
+                    ? `${item.name.slice(0, 30)}...`
+                    : item.name}
+                </h1>
+                <ul className="flex justify-start flex-wrap gap-2 mt-2">
+                  {item.tools.slice(0, 3).map((tool) => (
+                    <li key={tool}>
+                      <span className="text-xs text-white m-0 p-1 bg-gray-600">{`${tool}`}</span>
+                    </li>
+                  ))}
+                  {item.tools.length > 3 && (
+                    <li>
+                      <span className="text-xs text-white m-0 p-1 bg-gray-600">
+                        {`+${item.tools.length - 3}`}
+                      </span>
+                    </li>
+                  )}
+                </ul>
+                <div className="justify-self-end flex justify-around items-center mt-36 text-xs">
+                  {item.demo && (
+                    <Link
+                      to={item.demo}
+                      target="_blank"
+                      className="bg-amber-400 hover:bg-amber-500 hover:text-black text-white py-3 px-10 m-2"
+                    >
+                      Live Project
+                    </Link>
+                  )}
                   <Link
-                    to={item.demo}
                     target="_blank"
-                    className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
+                    to={item.source}
+                    className="bg-amber-400 hover:bg-amber-500 hover:text-black text-white py-3 px-10 m-2"
                   >
-                    Live Project
+                    View Source
                   </Link>
-                )}
-                <Link
-                  target="_blank"
-                  to={item.source}
-                  className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
-                >
-                  View Source
-                </Link>
+                </div>
               </div>
             </div>
           </div>
-          <Modal
-            item={item}
-            isModalOpen={modalStates[index]}
-            handleModal={() => handleModal(index)}
-          />
         </button>
       ))}
       {numItems < items.length ? (
         <button
           onClick={handleLoadMore}
-          className="transform hover:scale-105 transition duration-300 ease-in-out bg-cyan-900 hover:bg-amber-400 hover:text-cyan-900 text-amber-400 font-bold py-2 px-4 rounded-md p-3 my-10 px-6"
+          className="transform text-xs hover:bg-gray-400 bg-amber-400 transition duration-300 ease-in-out hover:text-white text-black font-semibold py-4 my-10 w-full"
           type="button"
         >
           LOAD MORE . . .

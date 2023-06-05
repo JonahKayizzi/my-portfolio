@@ -11,7 +11,7 @@ import { slide as Menu } from 'react-burger-menu';
 const links = [
   {
     id: 1,
-    name: 'Home',
+    name: 'Intro',
     icon: <FontAwesomeIcon icon={faHouse} />,
     path: '/',
   },
@@ -19,11 +19,17 @@ const links = [
     id: 2,
     name: 'Projects',
     icon: <FontAwesomeIcon icon={faFileCode} />,
-    path: '/projects',
+    path: '/#projects',
+  },
+  {
+    id: 3,
+    name: 'Skills',
+    icon: <FontAwesomeIcon icon={faFileCode} />,
+    path: '/skills',
   },
   {
     id: 4,
-    name: 'Employment',
+    name: 'Work Experience',
     icon: <FontAwesomeIcon icon={faBriefcase} />,
     path: '/employment',
   },
@@ -67,19 +73,30 @@ const RightBar = () => {
 
   return (
     <nav>
-      <div className="lg:w-1/12 lg:contents hidden">
-        {links.map((link) => (
+      <div className="w-11/12 flex justify-between gap-4 px-8 z-10 shadow-md shadow-black py-4 fixed bg-[rgb(25,25,25)]">
+        <div>
           <NavLink
-            className="transform hover:scale-105 transition duration-300 ease-in-out flex flex-col text-amber-400 items-center justify-end gap-2 py-6 px-2 text-xl font-light my-2 bg-cyan-900 rounded-md shadow-md shadow-black border-y border-amber-400"
-            to={link.path}
+            className="text-amber-400 text-xl font-black mr-4"
+            to="/"
             activeclassname="active"
-            key={link.id}
             onClick={() => closeMenu()}
           >
-            {link.icon}
-            <span className="text-xs">{link.name}</span>
+            <span>@JonahKayizzi</span>
           </NavLink>
-        ))}
+        </div>
+        <div className="flex justify-between gap-8">
+          {links.map((link) => (
+            <NavLink
+              className="transform hover:scale-105 transition duration-300 ease-in-out text-white text-xl font-light"
+              to={link.path}
+              activeclassname="active"
+              key={link.id}
+              onClick={() => closeMenu()}
+            >
+              <span className="text-xs">{link.name}</span>
+            </NavLink>
+          ))}
+        </div>
       </div>
       <div className="w-screen lg:hidden contents">
         <Menu

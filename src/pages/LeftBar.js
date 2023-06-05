@@ -3,7 +3,7 @@ import AboutMe from '../components/leftbar/AboutMe';
 import ContactInfo from '../components/leftbar/ContactInfo';
 
 const LeftBar = () => (
-  <div className="lg:w-1/4 w-full">
+  <div className="w-full px-8 flex shadow-md shadow-black">
     <ContactInfo />
     <AboutMe />
   </div>

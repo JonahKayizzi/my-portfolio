@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   employments: [
     {
+      id: 1,
       name: 'Microverse',
       link: 'https://www.microverse.org/',
       location: 'Remote',
@@ -18,6 +19,7 @@ const initialState = {
       ],
     },
     {
+      id: 2,
       name: 'Uganda Civil Aviation Authority',
       link: 'https://www.caa.go.ug/',
       location: 'Kampala, Uganda',
@@ -27,11 +29,13 @@ const initialState = {
       end: 'Present',
       duration: '6 years',
       highlights: [
+        'Supervised activities for developing over 20 database-driven aeronautical charts',
         'Built a subscription management application for aeronautical products using PHP and MySQL that improved work efficiency and revenue by 70%.',
         'Led a team of 4 developers, fixed over 40 pending functional requirements of the Safety Management system in absence of the contractor and migrated from PHP to Java.',
       ],
     },
     {
+      id: 3,
       name: 'Compuscan CRB (now Experian)',
       link: 'https://www.experian.co.ug/',
       location: 'Kampala, Uganda',
@@ -46,6 +50,7 @@ const initialState = {
       ],
     },
     {
+      id: 4,
       name: 'Cyber Dynamics Startup',
       location: 'Kampala, Uganda',
       role: 'Back-end Developer',
@@ -60,6 +65,7 @@ const initialState = {
       ],
     },
     {
+      id: 5,
       name: 'Huawei Technologies',
       link: 'https://www.huawei.com/',
       location: 'Kampala, Uganda',
