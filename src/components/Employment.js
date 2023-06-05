@@ -1,50 +1,76 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 const History = () => {
   const { employments } = useSelector((state) => state.employmentsSl);
+  const [expandedEmployments, setExpandedEmployments] = useState([]);
+
+  const toggleEmployment = (employmentId) => {
+    if (expandedEmployments.includes(employmentId)) {
+      setExpandedEmployments(
+        expandedEmployments.filter((id) => id !== employmentId),
+      );
+    } else {
+      setExpandedEmployments([...expandedEmployments, employmentId]);
+    }
+  };
+
   return (
     <div className="flex flex-wrap justify-left gap-1">
+      <h3 className="py-2 font-extrabold place-self-start text-xl w-full bg-[rgb(25,25,25)]">
+        Where I have worked
+      </h3>
       {employments.map((employment) => (
         <div
           key={employment}
-          className="bg-cyan-900 font-thin lg:my-3 my-1 p-2 shadow-md shadow-black rounded-md w-full border-t border-r border-amber-400"
+          className="bg-[rgb(25,25,25)] font-thin lg:my-3 my-1 p-2 w-full border-t border-r border-amber-400"
         >
           <h2 className="text-xl my-4 text-left ml-4 flex justify-between">
             {employment.link ? (
-              <Link
+              <button
                 className="text-amber-400 font-light"
-                to={employment.link}
                 target="_blank"
+                type="button"
+                onClick={() => toggleEmployment(employment.id)}
               >
                 {employment.name}
-              </Link>
+              </button>
             ) : (
               <p className="text-amber-400 font-light">{employment.name}</p>
             )}
             <p className="italic text-lg">{employment.location}</p>
           </h2>
-          <ul className="flex justify-between text-sm">
-            <li>
-              <ul className="flex gap-2">
-                <li className="font-light">{employment.role}</li>
-                <li className="italic">{`(${employment.type})`}</li>
+          {expandedEmployments.includes(employment.id) && (
+            <>
+              <div>
+                <p>
+                  Role:
+                  {employment.role}
+                </p>
+                <p>
+                  Type:
+                  {employment.type}
+                </p>
+                <p>
+                  Start:
+                  {employment.start}
+                </p>
+                <p>
+                  End:
+                  {employment.end}
+                </p>
+                <p>
+                  Duration:
+                  {employment.duration}
+                </p>
+              </div>
+              <ul className="flex flex-col justify-around my-2 list-disc px-5 text-sm">
+                {employment.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
               </ul>
-            </li>
-            <li>
-              <ul className="flex gap-2 italic text-sm">
-                <li>{`${employment.start} - `}</li>
-                <li>{`${employment.end},`}</li>
-                <li>{employment.duration}</li>
-              </ul>
-            </li>
-          </ul>
-          <ul className="flex flex-col justify-around my-2 list-disc px-5 text-sm">
-            {employment.highlights.map((highlight) => (
-              <li key={highlight}>{highlight}</li>
-            ))}
-          </ul>
+            </>
+          )}
         </div>
       ))}
     </div>

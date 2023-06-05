@@ -11,6 +11,7 @@ const initialState = {
     backend: [
       { name: 'PHP', level: 3 },
       { name: 'Java', level: 1 },
+      { name: 'Ruby', level: 1 },
       { name: 'MySQL', level: 4 },
       { name: 'PostgreSQL', level: 1 },
     ],

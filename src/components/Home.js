@@ -46,7 +46,7 @@ const Home = () => {
                 <span className="italic">PHP to Rails migration</span>
               </p>
             </li>
-            <li className="w-1/2 flex items-center gap-2 p-1 m-1">
+            <li className="w-full flex items-center gap-2 p-1 m-1">
               <Link
                 className="text-black font-bold text-center hover:bg-amber-400 hover:text-white h-full px-1 bg-amber-500 text-xs font-thin w-1/4"
                 target="_blank"

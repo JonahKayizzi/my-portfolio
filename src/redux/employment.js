@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   employments: [
     {
+      id: 1,
       name: 'Microverse',
       link: 'https://www.microverse.org/',
       location: 'Remote',
@@ -18,6 +19,7 @@ const initialState = {
       ],
     },
     {
+      id: 2,
       name: 'Uganda Civil Aviation Authority',
       link: 'https://www.caa.go.ug/',
       location: 'Kampala, Uganda',
@@ -32,6 +34,7 @@ const initialState = {
       ],
     },
     {
+      id: 3,
       name: 'Compuscan CRB (now Experian)',
       link: 'https://www.experian.co.ug/',
       location: 'Kampala, Uganda',
@@ -46,6 +49,7 @@ const initialState = {
       ],
     },
     {
+      id: 4,
       name: 'Cyber Dynamics Startup',
       location: 'Kampala, Uganda',
       role: 'Back-end Developer',
@@ -60,6 +64,7 @@ const initialState = {
       ],
     },
     {
+      id: 5,
       name: 'Huawei Technologies',
       link: 'https://www.huawei.com/',
       location: 'Kampala, Uganda',
