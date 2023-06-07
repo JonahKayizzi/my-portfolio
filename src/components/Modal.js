@@ -4,47 +4,60 @@ import { Link } from 'react-router-dom';
 
 const Modal = ({ item, handleClose }) => (
   <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80 z-50">
-    <div className=" flex flex-col items-center p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-3/4 w-11/12  h-11/12 bg-white rounded-lg shadow-lg">
-      <button
-        type="button"
-        className="absolute left-full"
-        onClick={handleClose}
+    <div className=" flex flex-col items-center p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-1/2 w-11/12 h-5/6 bg-white shadow-lg">
+      <div
+        className="w-full h-72 bg-contain bg-center bg-white"
+        style={{
+          backgroundImage: `url(${item.images})`,
+          backgroundSize: '100%',
+          backgroundRepeat: 'no-repeat',
+        }}
       >
-        <span className="text-2xl text-amber-400 hover:bg-teal-900 m-0 px-1 bg-cyan-900">
-          X
-        </span>
-      </button>
-      <img className="w-2/3 " src={item.images} alt={item.images} />
-      <div className="p-4">
-        <h1 className="text-md font-bold text-gray-800">{item.name}</h1>
-        <p className="mt-2 text-gray-600 text-sm">{item.description}</p>
-        <ul className="flex justify-around flex-wrap gap-2 mt-2">
+        <button
+          type="button"
+          className="absolute right-0 top-0"
+          onClick={handleClose}
+        >
+          <span className="text-xl text-white hover:bg-amber-500 m-0 py-1 px-2 bg-amber-400">
+            X
+          </span>
+        </button>
+      </div>
+      <div className="p-4 px-12">
+        <div className="flex justify-between items-center">
+          <h1 className="text-md font-extrabold text-gray-800 w-2/3">
+            {item.name}
+          </h1>
+          <div className="flex flex-col items-center mt-1 text-xs">
+            {item.demo && (
+              <Link
+                to={item.demo}
+                target="_blank"
+                className="bg-amber-400 hover:bg-amber-500 hover:text-black text-white py-2 px-8 m-1"
+              >
+                Live Project
+              </Link>
+            )}
+            <Link
+              to={item.source}
+              target="_blank"
+              className="bg-amber-400 hover:bg-amber-500 hover:text-black text-white py-2 px-8 m-1"
+            >
+              View Source
+            </Link>
+          </div>
+        </div>
+
+        <ul className="flex justify-start flex-wrap gap-2 mt-2">
           {item.tools.map((tool) => (
             <li key={tool}>
-              <span className="text-xs text-gray-600 m-0 p-1 bg-gray-200 rounded-md">
+              <span className="text-xs text-white m-0 p-1 bg-gray-600">
                 {tool}
               </span>
             </li>
           ))}
         </ul>
-        <div className="flex justify-around items-center mt-4 text-xs">
-          {item.demo && (
-            <Link
-              to={item.demo}
-              target="_blank"
-              className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
-            >
-              Live Project
-            </Link>
-          )}
-          <Link
-            to={item.source}
-            target="_blank"
-            className="bg-black hover:bg-amber-500 hover:text-black text-white py-1 px-2 rounded-sm m-2"
-          >
-            View Source
-          </Link>
-        </div>
+        <p className="mt-2 text-gray-600 text-xs">{item.description}</p>
       </div>
     </div>
   </div>
