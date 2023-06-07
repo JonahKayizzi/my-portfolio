@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Cards from './Cards';
 import { searchProjects } from '../redux/projects';
+// eslint-disable-next-line import/no-named-as-default
 import Modal from './Modal';
 
 const Projects = () => {
@@ -53,7 +54,7 @@ const Projects = () => {
       </form>
       <Cards items={displayedProjects} handleModal={handleModal} />
       {modalOpen && (
-        <Modal project={selectedProject} handleClose={handleModalClose} />
+        <Modal item={selectedProject} handleClose={handleModalClose} />
       )}
     </div>
   );
