@@ -25,7 +25,7 @@ const Modal = ({ item, handleClose }) => (
       </div>
       <div className="p-4 lg:px-12 px-2">
         <div className="flex lg:flex-row flex-col justify-between items-center">
-          <h1 className="text-md font-extrabold text-gray-800 lg:w-2/3 w-full">
+          <h1 className="text-md font-extrabold text-gray-800 lg:w-2/3 w-full lg:order-first order-1">
             {item.name}
           </h1>
           <div className="flex flex-col items-center mt-1 text-xs w-full">
