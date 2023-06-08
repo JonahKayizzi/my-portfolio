@@ -9,7 +9,7 @@ import Publications from './components/Publications';
 import Awards from './components/Awards';
 
 const App = () => (
-  <div className="w-full px-8 shadow-md shadow-black">
+  <div className="w-full lg:px-8 px-2 shadow-md shadow-black">
     <Routes>
       <Route exact path="/skills" element={<Home />} />
       <Route exact path="/" element={<Projects />} />

@@ -45,7 +45,7 @@ const Projects = () => {
       </h3>
       <form className="lg:p-6 p-2 lg:w-5/6 w-full">
         <input
-          className="transform hover:scale-105 transition duration-300 ease-in-out bg-gray-50 w-full text-gray-900 text-sm border-gray-300 border-2 focus:outline-none focus:border-amber-400 px-4 py-2 dark:bg-gray-800 dark:text-gray-100"
+          className="transform hover:scale-105 transition duration-300 ease-in-out bg-gray-50 w-full text-gray-900 lg:text-sm text-xs border-gray-300 border-2 focus:outline-none focus:border-amber-400 px-4 py-2 dark:bg-gray-800 dark:text-gray-100"
           type="text"
           name="title"
           placeholder="Search for projects by technology; e.g. React, Redux, Ruby on Rails, Java, PHP, etc."

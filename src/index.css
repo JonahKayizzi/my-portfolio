@@ -118,3 +118,9 @@ ul {
 .animate-fade-in-out {
   animation: fade-in-out 2s infinite;
 }
+
+@media (max-width: 768px) {
+  #root {
+    gap: 2em;
+  }
+}
