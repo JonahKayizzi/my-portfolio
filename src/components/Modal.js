@@ -23,17 +23,17 @@ const Modal = ({ item, handleClose }) => (
           </span>
         </button>
       </div>
-      <div className="p-4 px-12">
-        <div className="flex justify-between items-center">
-          <h1 className="text-md font-extrabold text-gray-800 w-2/3">
+      <div className="p-4 lg:px-12 px-2">
+        <div className="flex lg:flex-row flex-col justify-between items-center">
+          <h1 className="text-md font-extrabold text-gray-800 lg:w-2/3 w-full">
             {item.name}
           </h1>
-          <div className="flex flex-col items-center mt-1 text-xs">
+          <div className="flex flex-col items-center mt-1 text-xs w-full">
             {item.demo && (
               <Link
                 to={item.demo}
                 target="_blank"
-                className="bg-amber-400 hover:bg-amber-500 hover:text-black text-white py-2 px-8 m-1"
+                className="bg-amber-400 hover:bg-amber-500 hover:text-black text-center text-white py-2 px-8 m-1 w-full"
               >
                 Live Project
               </Link>
@@ -41,7 +41,7 @@ const Modal = ({ item, handleClose }) => (
             <Link
               to={item.source}
               target="_blank"
-              className="bg-amber-400 hover:bg-amber-500 hover:text-black text-white py-2 px-8 m-1"
+              className="bg-amber-400 hover:bg-amber-500 hover:text-black text-center text-white py-2 px-8 m-1 w-full"
             >
               View Source
             </Link>
