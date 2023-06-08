@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const AboutMe = () => (
-  <div className="w-1/3 p-5 text-center text-sm">
+  <div className="lg:w-1/3 w-full lg:p-5 p-2 text-center text-sm">
     <div className="flex items-center justify-between">
       <div className="w-4/5">
         <div className="p-3">

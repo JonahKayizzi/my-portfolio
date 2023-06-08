@@ -6,7 +6,7 @@ const Modal = ({ item, handleClose }) => (
   <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80 z-50">
     <div className=" flex flex-col items-center p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-1/2 w-11/12 h-5/6 bg-white shadow-lg">
       <div
-        className="w-full h-72 bg-contain bg-center bg-white"
+        className="w-full h-96 bg-contain bg-center bg-white"
         style={{
           backgroundImage: `url(${item.images})`,
           backgroundSize: '100%',
@@ -23,17 +23,17 @@ const Modal = ({ item, handleClose }) => (
           </span>
         </button>
       </div>
-      <div className="p-4 px-12">
-        <div className="flex justify-between items-center">
-          <h1 className="text-md font-extrabold text-gray-800 w-2/3">
+      <div className="p-4 lg:px-12 px-2">
+        <div className="flex lg:flex-row flex-col justify-between items-center">
+          <h1 className="text-md font-extrabold text-gray-800 lg:w-2/3 w-full lg:order-first order-1">
             {item.name}
           </h1>
-          <div className="flex flex-col items-center mt-1 text-xs">
+          <div className="flex flex-col items-center mt-1 text-xs w-full">
             {item.demo && (
               <Link
                 to={item.demo}
                 target="_blank"
-                className="bg-amber-400 hover:bg-amber-500 hover:text-black text-white py-2 px-8 m-1"
+                className="bg-amber-400 hover:bg-amber-500 hover:text-black text-center text-white py-2 px-8 m-1 w-full"
               >
                 Live Project
               </Link>
@@ -41,7 +41,7 @@ const Modal = ({ item, handleClose }) => (
             <Link
               to={item.source}
               target="_blank"
-              className="bg-amber-400 hover:bg-amber-500 hover:text-black text-white py-2 px-8 m-1"
+              className="bg-amber-400 hover:bg-amber-500 hover:text-black text-center text-white py-2 px-8 m-1 w-full"
             >
               View Source
             </Link>
