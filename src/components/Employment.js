@@ -17,7 +17,7 @@ const History = () => {
   return (
     <div className="flex flex-wrap justify-left gap-1 px-5">
       <h3 className="py-2 flex font-extrabold place-self-start text-xl w-full bg-[rgb(25,25,25)]">
-        <span className="w-1/2">Where I have worked</span>
+        <span className="lg:w-1/2 w-2/3">Where I have worked</span>
         <span className="bottom-0 left-0 w-full h-0.5 bg-amber-500 mt-4" />
       </h3>
 
@@ -35,7 +35,7 @@ const History = () => {
             overflow: 'hidden',
           }}
         >
-          <h2 className="text-lg my-2 text-left ml-4 w-1/3">
+          <h2 className="lg:text-lg text:sm my-2 text-left ml-4 w-1/3">
             <button
               className={`text-amber-400 font-light h-full w-11/12 p-2 ${
                 expandedEmploymentId === employment.id
@@ -49,8 +49,8 @@ const History = () => {
             </button>
           </h2>
           {expandedEmploymentId === employment.id && (
-            <div className="text-gray-400 text-sm w-2/3">
-              <p className="flex gap-2 text-lg text-white my-1">
+            <div className="text-gray-400 lg:text-sm text-xs w-2/3">
+              <p className="flex gap-2 lg:text-lg text-md text-white my-1">
                 <span className="font-bold">{employment.role}</span>
                 <span>
                   {employment.link ? (
