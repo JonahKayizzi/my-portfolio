@@ -43,7 +43,7 @@ const Projects = () => {
         <span className="w-1/3">My Projects</span>
         <span className="bottom-0 left-0 w-full h-0.5 bg-amber-500 mt-4" />
       </h3>
-      <form className="p-6 w-5/6">
+      <form className="lg:p-6 p-2 lg:w-5/6 w-full">
         <input
           className="transform hover:scale-105 transition duration-300 ease-in-out bg-gray-50 w-full text-gray-900 text-sm border-gray-300 border-2 focus:outline-none focus:border-amber-400 px-4 py-2 dark:bg-gray-800 dark:text-gray-100"
           type="text"
