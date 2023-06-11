@@ -51,7 +51,7 @@ const Home = () => {
               <Link
                 className="text-black font-bold text-center hover:bg-amber-400 hover:text-white h-full px-1 bg-amber-500 text-xs font-thin w-1/4"
                 target="_blank"
-                to="https://github.com/JonahKayizzi/ANS-SMS-Java-React"
+                to="https://github.com/JonahKayizzi/TO-DO-Revamp-ReactNative"
               >
                 View Repo
               </Link>
