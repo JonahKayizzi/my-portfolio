@@ -36,17 +36,17 @@ const links = [
 
 const RightBar = () => (
   <nav>
-    <div className="w-11/12 justify-between gap-2 lg:px-8 p-2 z-10 shadow-md shadow-black lg:py-4 fixed bg-[rgb(25,25,25)] flex">
+    <div className="w-11/12 justify-between sm:gap-2 gap-0 lg:px-8 p-2 z-10 shadow-md shadow-black lg:py-4 fixed bg-[rgb(25,25,25)] flex">
       <div>
         <NavLink
-          className="text-amber-400 lg:text-xl text-md font-black lg:mr-4 mr-2"
+          className="text-amber-400 lg:text-xl sm:text-md text-sm font-black lg:mr-4 mr-2"
           to="/"
           activeclassname="active"
         >
           <span>@JonahKayizzi</span>
         </NavLink>
       </div>
-      <div className="flex justify-between lg:gap-8 gap-2">
+      <div className="flex justify-between lg:gap-8 sm:gap-2 gap-1">
         {links.map((link) => (
           <NavLink
             className="transform hover:scale-105 transition duration-300 ease-in-out text-white font-light"
