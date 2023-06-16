@@ -25,15 +25,15 @@ const Modal = ({ item, handleClose }) => (
       </div>
       <div className="p-4 lg:px-12 px-2">
         <div className="flex lg:flex-row flex-col justify-between items-center">
-          <h1 className="text-md font-extrabold text-gray-800 lg:w-2/3 w-full lg:order-first order-1">
+          <h1 className="xl:text-xl text-md font-extrabold text-gray-800 lg:w-2/3 w-full lg:order-first order-1">
             {item.name}
           </h1>
-          <div className="flex flex-col items-center mt-1 text-xs w-full">
+          <div className="flex flex-col items-center mt-1 xl:text-lg text-xs w-full">
             {item.demo && (
               <Link
                 to={item.demo}
                 target="_blank"
-                className="bg-amber-400 hover:bg-amber-500 hover:text-black text-center text-white py-2 px-8 m-1 w-full"
+                className="bg-amber-400 hover:bg-amber-500 hover:text-black text-center text-white xl:py-4 py-2 px-8 xl:m-2 m-1 w-full"
               >
                 Live Project
               </Link>
@@ -41,23 +41,25 @@ const Modal = ({ item, handleClose }) => (
             <Link
               to={item.source}
               target="_blank"
-              className="bg-amber-400 hover:bg-amber-500 hover:text-black text-center text-white py-2 px-8 m-1 w-full"
+              className="bg-amber-400 hover:bg-amber-500 hover:text-black text-center text-white xl:py-4 py-2 px-8 xl:m-2 m-1 w-full"
             >
               View Source
             </Link>
           </div>
         </div>
 
-        <ul className="flex justify-start flex-wrap gap-2 mt-2">
+        <ul className="flex justify-start flex-wrap xl:gap-4 gap-2 xl:mt-4 mt-2">
           {item.tools.map((tool) => (
             <li key={tool}>
-              <span className="text-xs text-white m-0 p-1 bg-gray-600">
+              <span className="xl:text-md text-xs text-white m-0 xl:p-2 p-1 bg-gray-600">
                 {tool}
               </span>
             </li>
           ))}
         </ul>
-        <p className="mt-2 text-gray-600 text-xs">{item.description}</p>
+        <p className="xl:mt-4 mt-2 text-gray-600 xl:text-lg text-xs">
+          {item.description}
+        </p>
       </div>
     </div>
   </div>
