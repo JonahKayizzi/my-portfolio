@@ -24,7 +24,7 @@ const History = () => {
       {employments.map((employment) => (
         <div
           key={employment}
-          className={`bg-[rgb(25,25,25)] font-thin lg:my-3 my-1 p-2 w-full ${
+          className={`bg-[rgb(25,25,25)] font-thin lg:my-3 my-1 sm:p-2 p-1 w-full ${
             expandedEmploymentId === employment.id
               ? 'border-l-2 border-amber-400'
               : 'border-l-2 border-amber-500'
@@ -35,7 +35,7 @@ const History = () => {
             overflow: 'hidden',
           }}
         >
-          <h2 className="lg:text-lg text:sm my-2 text-left ml-4 w-1/3">
+          <h2 className="lg:text-lg sm:text-sm text-xs my-2 text-left ml-4 w-1/3">
             <button
               className={`text-amber-400 font-light h-full w-11/12 p-2 ${
                 expandedEmploymentId === employment.id
