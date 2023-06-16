@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Modal = ({ item, handleClose }) => (
   <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-80 z-50">
-    <div className=" flex flex-col items-center p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-1/2 w-11/12 h-5/6 bg-white shadow-lg">
+    <div className=" flex flex-col items-center p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-1/2 w-11/12 xl:h-5/6 lg:h-4/6 h-1/2 bg-white shadow-lg">
       <div
-        className="w-full h-96 bg-contain bg-center bg-white"
+        className="w-full lg:h-96 sm:h-72 h-64 bg-contain bg-center bg-white"
         style={{
           backgroundImage: `url(${item.images})`,
           backgroundSize: '100%',
