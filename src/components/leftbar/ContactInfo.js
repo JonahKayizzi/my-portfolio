@@ -30,21 +30,21 @@ const ContactInfo = () => (
       driven aeronautical chart production.
     </p>
     <div className="lg:w-4/5 w-full">
-      <ul className="flex justify-around lg:gap-4 gap-2 text-xs font-thin p-3 text-gray-400">
+      <ul className="flex sm:flex-row flex-col justify-around lg:gap-4 gap-2 text-xs font-thin p-3 text-gray-400">
         <li className="">
-          <p className="flex justify-end gap-3 my-2">
+          <p className="flex sm:justify-end justify-start gap-3 my-2">
             <FontAwesomeIcon className="text-amber-400" icon={faHouse} />
             <span>Kampala, Uganda</span>
           </p>
         </li>
         <li>
-          <p className="flex justify-end gap-3 my-2">
+          <p className="flex sm:justify-end justify-start gap-3 my-2">
             <FontAwesomeIcon className="text-amber-400" icon={faMobile} />
             <span>+256759223526</span>
           </p>
         </li>
         <li>
-          <p className="flex justify-end gap-3 my-2">
+          <p className="flex sm:justify-end justify-start gap-3 my-2">
             <FontAwesomeIcon className="text-amber-400" icon={faEnvelope} />
             <span>jonahkayizzi@gmail.com</span>
           </p>
