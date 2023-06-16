@@ -12,7 +12,7 @@ const Cards = ({ items, handleModal }) => {
     <div className="flex flex-wrap lg:mb-10 mb-2 justify-start">
       {items.slice(0, numItems).map((item) => (
         <button
-          className="md:w-1/2 w-full p-2 transform hover:scale-105 transition duration-300 ease-in-out"
+          className="xl:w-1/3 md:w-1/2 w-full p-2 transform hover:scale-105 transition duration-300 ease-in-out"
           onClick={() => handleModal(item)}
           key={item.rank}
           type="button"
